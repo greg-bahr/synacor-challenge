@@ -3,3 +3,6 @@
 .idea
 .gradle
 build/
+out/
+src/main/resources/
+src/test/
