@@ -288,6 +288,9 @@ public class VirtualMachine {
     }
 
     public int getRegisterIndex(int num) {
+        if (num < 32768 || num > 32775) {
+            throw new IllegalArgumentException("Not a valid register.");
+        }
         return num%32768;
     }
 }
