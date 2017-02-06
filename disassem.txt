@@ -1,0 +1,4486 @@
+0| noop
+1| noop
+2| out Welcome to the Synacor Challenge!
+3| out Please record your progress by putting codes like
+4| out this one into the challenge website: NCHafUvMxkJe
+5| out
+6| out Executing self-test...
+7| out
+8| jmp 347
+9| out jmp fails
+10| halt
+11| noop
+12| noop
+13| noop
+14| noop
+15| noop
+16| noop
+17| noop
+18| noop
+19| noop
+20| jmp 358
+21| jmp 368
+22| jmp 397
+23| jmp 484
+24| jmp 424
+25| jmp 453
+26| noop
+27| noop
+28| noop
+29| noop
+30| out jmp lands -2
+31| halt
+32| noop
+33| noop
+34| out jmp lands -1
+35| halt
+36| noop
+37| noop
+38| out jmp lands +1
+39| halt
+40| noop
+41| noop
+42| noop
+43| noop
+44| out jmp lands +2
+45| halt
+46| jt 0 1074
+47| jf 1 1074
+48| jt 1 495
+49| jmp 1074
+50| jf 0 500
+51| jmp 1074
+52| jt (r0) 1093
+53| jt (r1) 1093
+54| jt (r2) 1093
+55| jt (r3) 1093
+56| jt (r4) 1093
+57| jt (r5) 1093
+58| jt (r6) 1093
+59| jt (r7) 1093
+60| set (r0) 1
+61| jf (r0) 1118
+62| set (r0) 0
+63| jt (r0) 1118
+64| add (r0) 1 1
+65| jt (r0) 564
+66| out no add op
+67| halt
+68| eq (r1) (r0) 2
+69| jt (r1) 590
+70| out no eq op
+71| halt
+72| push (r0)
+73| push (r1)
+74| pop (r0)
+75| pop (r1)
+76| eq (r2) (r1) 2
+77| jf (r2) 1158
+78| eq (r2) (r0) 1
+79| jf (r2) 1158
+80| gt (r2) (r1) (r0)
+81| jf (r2) 1139
+82| gt (r2) (r0) (r1)
+83| jt (r2) 1139
+84| gt (r2) 42 42
+85| jt (r2) 1139
+86| and (r0) 28912 19626
+87| eq (r1) (r0) 16544
+88| jf (r1) 1177
+89| or (r1) 28912 19626
+90| eq (r0) (r1) 31994
+91| jt (r0) 684
+92| out no bitwise or
+93| halt
+94| not (r0) 0
+95| eq (r1) (r0) 32767
+96| jf (r1) 1208
+97| not (r0) 21845
+98| eq (r1) (r0) 10922
+99| jf (r1) 1208
+100| call 1285
+101| jmp 1289
+102| pop (r0)
+103| eq (r1) (r0) 708
+104| jt (r1) 1289
+105| eq (r1) (r0) 706
+106| jf (r1) 1289
+107| set (r0) 1287
+108| call (r0)
+109| jmp 1289
+110| pop (r0)
+111| eq (r1) (r0) 731
+112| jt (r1) 1289
+113| eq (r1) (r0) 729
+114| jf (r1) 1289
+115| add (r0) 32767 32767
+116| eq (r1) (r0) 32766
+117| jf (r1) 1312
+118| eq (r1) 32766 (r0)
+119| jf (r1) 1312
+120| add (r0) 16384 16384
+121| jt (r0) 1312
+122| add (r0) 16384 16384
+123| jt (r0) 1312
+124| mult (r0) 6 9
+125| eq (r1) (r0) 42
+126| jt (r1) 1381
+127| eq (r1) (r0) 54
+128| jf (r1) 1414
+129| mult (r0) 12345 32123
+130| eq (r1) (r0) 99
+131| jf (r1) 1312
+132| mod (r0) 6 3
+133| eq (r1) (r0) 0
+134| jf (r1) 1437
+135| mod (r0) 70 6
+136| eq (r1) (r0) 4
+137| jf (r1) 1437
+138| mult (r0) 32766 15
+139| eq (r1) (r0) 32738
+140| jf (r1) 1312
+141| jmp 845
+142| rmem (r0) 843
+143| eq (r1) (r0) 20000
+144| jf (r1) 1239
+145| add (r2) 843 1
+146| rmem (r0) (r2)
+147| eq (r1) (r0) 10000
+148| jf (r1) 1239
+149| set (r0) 843
+150| wmem (r0) 30000
+151| rmem (r2) (r0)
+152| eq (r1) (r2) 30000
+153| jf (r1) 1262
+154| call 1723
+155| rmem (r0) 6068
+156| eq (r1) (r0) 11
+157| jf (r1) 1239
+158| add (r2) 6068 1
+159| rmem (r0) (r2)
+160| eq (r1) (r0) 116
+161| jf (r1) 1239
+162| wmem (r2) 84
+163| rmem (r0) (r2)
+164| eq (r1) (r0) 116
+165| jt (r1) 1262
+166| eq (r1) (r0) 84
+167| jf (r1) 1262
+168| wmem 937 21
+169| wmem 938 7
+170| jmp 941
+171| out ϒwmem opwrite fail
+172| halt
+173| add (r1) 10 6080
+174| add (r1) (r1) 1
+175| rmem (r2) 6116
+176| add (r2) (r2) 6116
+177| set (r0) 6116
+178| add (r0) (r0) 1
+179| gt (r3) (r0) (r2)
+180| jt (r3) 1023
+181| rmem (r4) (r0)
+182| wmem (r1) (r4)
+183| add (r0) (r0) 1
+184| add (r1) (r1) 1
+185| jmp 1000
+186| rmem (r0) 6080
+187| rmem (r1) 6099
+188| add (r0) (r0) (r1)
+189| add (r0) (r0) 1
+190| wmem 6080 (r0)
+191| wmem 6099 44
+192| set (r0) 6080
+193| call 1518
+194| push (r0)
+195| push (r1)
+196| push (r2)
+197| set (r0) 26851
+198| set (r1) 1531
+199| add (r2) 14182 11415
+200| call 1458
+201| pop (r2)
+202| pop (r1)
+203| pop (r0)
+204| jmp 2734
+205| out no jt/jf
+206| halt
+207| out nonzero reg
+208| halt
+209| out no set op
+210| halt
+211| out no gt op
+212| halt
+213| out no stack
+214| halt
+215| out no bitwise and
+216| halt
+217| out no bitwise not
+218| halt
+219| out no rmem op
+220| halt
+221| out no wmem op
+222| halt
+223| jmp 708
+224| jmp 731
+225| out no call op
+226| halt
+227| out no modulo math during add or mult
+228| halt
+229| out not hitchhiking
+230| halt
+231| out no mult op
+232| halt
+233| out no mod op
+234| halt
+235| push (r0)
+236| push (r3)
+237| push (r4)
+238| push (r5)
+239| push (r6)
+240| set (r6) (r0)
+241| set (r5) (r1)
+242| rmem (r4) (r0)
+243| set (r1) 0
+244| add (r3) 1 (r1)
+245| gt (r0) (r3) (r4)
+246| jt (r0) 1507
+247| add (r3) (r3) (r6)
+248| rmem (r0) (r3)
+249| call (r5)
+250| add (r1) (r1) 1
+251| jt (r1) 1480
+252| pop (r6)
+253| pop (r5)
+254| pop (r4)
+255| pop (r3)
+256| pop (r0)
+257| ret
+258| push (r1)
+259| set (r1) 1528
+260| call 1458
+261| pop (r1)
+262| ret
+263| out
+264| ret
+265| push (r1)
+266| set (r1) (r2)
+267| call 2125
+268| out
+269| pop (r1)
+270| ret
+271| push (r1)
+272| push (r3)
+273| rmem (r3) (r0)
+274| jf (r3) 1563
+275| call 1458
+276| jt (r1) 1563
+277| set (r0) (r2)
+278| jmp 1566
+279| set (r0) 32767
+280| pop (r3)
+281| pop (r1)
+282| ret
+283| push (r1)
+284| push (r2)
+285| set (r2) (r1)
+286| set (r1) 1605
+287| call 1543
+288| pop (r2)
+289| pop (r1)
+290| ret
+291| push (r1)
+292| push (r2)
+293| set (r2) (r1)
+294| set (r1) 1648
+295| call 1543
+296| pop (r2)
+297| pop (r1)
+298| ret
+299| eq (r0) (r0) (r2)
+300| jf (r0) 1618
+301| set (r2) (r1)
+302| set (r1) 32767
+303| ret
+304| push (r3)
+305| add (r3) (r2) 1
+306| add (r3) (r3) (r1)
+307| rmem (r3) (r3)
+308| eq (r3) (r0) (r3)
+309| jt (r3) 1645
+310| set (r2) (r1)
+311| set (r1) 32767
+312| pop (r3)
+313| ret
+314| push (r1)
+315| set (r1) (r2)
+316| call 1667
+317| pop (r1)
+318| jf (r0) 1666
+319| set (r2) (r1)
+320| set (r1) 32767
+321| ret
+322| push (r1)
+323| push (r2)
+324| push (r3)
+325| push (r4)
+326| rmem (r3) (r0)
+327| rmem (r4) (r1)
+328| eq (r2) (r3) (r4)
+329| jf (r2) 1711
+330| or (r2) (r3) (r4)
+331| jf (r2) 1706
+332| set (r2) (r1)
+333| set (r1) 1619
+334| call 1458
+335| jf (r1) 1711
+336| set (r0) 1
+337| jmp 1714
+338| set (r0) 0
+339| pop (r4)
+340| pop (r3)
+341| pop (r2)
+342| pop (r1)
+343| ret
+344| push (r0)
+345| push (r1)
+346| set (r1) 6068
+347| rmem (r0) (r1)
+348| push (r1)
+349| mult (r1) (r1) (r1)
+350| call 2125
+351| set (r1) 16724
+352| call 2125
+353| pop (r1)
+354| wmem (r1) (r0)
+355| add (r1) (r1) 1
+356| eq (r0) 30050 (r1)
+357| jf (r0) 1730
+358| pop (r1)
+359| pop (r0)
+360| ret
+361| push (r0)
+362| push (r2)
+363| push (r3)
+364| push (r4)
+365| push (r5)
+366| add (r2) (r1) (r0)
+367| set (r0) (r1)
+368| set (r5) 0
+369| add (r0) (r0) 1
+370| gt (r3) (r0) (r2)
+371| jt (r3) 1816
+372| in (r4)
+373| eq (r3) (r4) 10
+374| jt (r3) 1816
+375| wmem (r0) (r4)
+376| add (r5) (r5) 1
+377| jmp 1787
+378| wmem (r1) (r5)
+379| eq (r3) (r4) 10
+380| jt (r3) 1830
+381| in (r4)
+382| jmp 1819
+383| pop (r5)
+384| pop (r4)
+385| pop (r3)
+386| pop (r2)
+387| pop (r0)
+388| ret
+389| push (r3)
+390| push (r4)
+391| push (r5)
+392| push (r6)
+393| set (r6) 1
+394| add (r4) (r3) (r6)
+395| rmem (r4) (r4)
+396| add (r5) 6125 (r6)
+397| wmem (r5) (r4)
+398| add (r6) (r6) 1
+399| rmem (r5) 6125
+400| gt (r4) (r6) (r5)
+401| jf (r4) 1852
+402| set (r3) 0
+403| set (r4) 0
+404| rmem (r5) 6125
+405| mod (r5) (r4) (r5)
+406| add (r5) (r5) 6125
+407| add (r5) (r5) 1
+408| rmem (r6) (r5)
+409| mult (r6) (r6) 5249
+410| add (r6) (r6) 12345
+411| wmem (r5) (r6)
+412| push (r0)
+413| push (r1)
+414| set (r1) (r6)
+415| call 2125
+416| set (r6) (r0)
+417| pop (r1)
+418| pop (r0)
+419| rmem (r5) (r1)
+420| mod (r6) (r6) (r5)
+421| add (r6) (r6) 1
+422| gt (r5) (r6) (r2)
+423| jt (r5) 1952
+424| set (r3) 1
+425| add (r6) (r6) (r1)
+426| rmem (r6) (r6)
+427| add (r4) (r4) 1
+428| add (r5) (r4) 6129
+429| wmem (r5) (r6)
+430| rmem (r5) 6129
+431| eq (r5) (r4) (r5)
+432| jf (r5) 1886
+433| jf (r3) 1880
+434| push (r0)
+435| set (r0) 6129
+436| call 1518
+437| pop (r0)
+438| pop (r6)
+439| pop (r5)
+440| pop (r4)
+441| pop (r3)
+442| ret
+443| push (r0)
+444| push (r1)
+445| push (r2)
+446| push (r3)
+447| push (r4)
+448| push (r5)
+449| set (r2) 1
+450| set (r5) 0
+451| jf (r0) 2092
+452| eq (r4) (r2) 10000
+453| set (r3) (r0)
+454| jt (r4) 2040
+455| mult (r1) (r2) 10
+456| mod (r3) (r0) (r1)
+457| set (r4) 0
+458| mult (r2) (r2) 32767
+459| jf (r3) 2060
+460| add (r4) (r4) 1
+461| add (r3) (r3) (r2)
+462| jmp 2047
+463| mult (r2) (r2) 32767
+464| mult (r3) (r4) (r2)
+465| mult (r3) (r3) 32767
+466| add (r0) (r0) (r3)
+467| add (r4) (r4) 48
+468| mult (r2) (r2) 10
+469| add (r5) (r5) 1
+470| push (r4)
+471| jmp 2019
+472| jt (r5) 2099
+473| out
+474| jmp 2112
+475| jf (r5) 2112
+476| pop (r0)
+477| out
+478| add (r5) (r5) 32767
+479| jmp 2099
+480| pop (r5)
+481| pop (r4)
+482| pop (r3)
+483| pop (r2)
+484| pop (r1)
+485| pop (r0)
+486| ret
+487| push (r1)
+488| push (r2)
+489| and (r2) (r0) (r1)
+490| not (r2) (r2)
+491| or (r0) (r0) (r1)
+492| and (r0) (r0) (r2)
+493| pop (r2)
+494| pop (r1)
+495| ret
+496| add (r0) (r0) (r1)
+497| gt (r1) (r1) (r0)
+498| ret
+499| push (r2)
+500| gt (r2) (r1) (r0)
+501| mult (r1) (r1) 32767
+502| add (r0) (r0) (r1)
+503| set (r1) (r2)
+504| pop (r2)
+505| ret
+506| jf (r0) 2241
+507| jf (r1) 2241
+508| push (r2)
+509| push (r3)
+510| gt (r2) (r1) (r0)
+511| jt (r2) 2204
+512| set (r2) (r0)
+513| set (r0) (r1)
+514| set (r1) (r2)
+515| set (r2) (r0)
+516| set (r0) 0
+517| add (r0) (r0) (r1)
+518| gt (r3) (r1) (r0)
+519| jt (r3) 2233
+520| add (r2) (r2) 32767
+521| jt (r2) 2210
+522| set (r1) 0
+523| jmp 2236
+524| set (r1) 1
+525| pop (r3)
+526| pop (r2)
+527| ret
+528| set (r0) 0
+529| set (r1) 0
+530| ret
+531| push (r1)
+532| push (r2)
+533| jf (r1) 2276
+534| add (r1) (r1) 32767
+535| and (r2) (r0) 16384
+536| mult (r0) (r0) 2
+537| jf (r2) 2252
+538| or (r0) (r0) 1
+539| jmp 2252
+540| pop (r2)
+541| pop (r1)
+542| ret
+543| push (r1)
+544| gt (r1) (r0) 14
+545| jt (r1) 2309
+546| set (r1) (r0)
+547| set (r0) 1
+548| jf (r1) 2312
+549| add (r1) (r1) 32767
+550| mult (r0) (r0) 2
+551| jmp 2296
+552| set (r0) 32767
+553| pop (r1)
+554| ret
+555| jmp 2734
+556| halt
+557| halt
+558| halt
+559| halt
+560| halt
+561| halt
+562| halt
+563| halt
+564| halt
+565| halt
+566| halt
+567| halt
+568| halt
+569| halt
+570| halt
+571| halt
+572| halt
+573| halt
+574| halt
+575| halt
+576| halt
+577| halt
+578| halt
+579| halt
+580| halt
+581| halt
+582| halt
+583| halt
+584| halt
+585| halt
+586| halt
+587| halt
+588| halt
+589| halt
+590| halt
+591| halt
+592| halt
+593| halt
+594| halt
+595| halt
+596| halt
+597| halt
+598| halt
+599| halt
+600| push (r0)
+601| push (r1)
+602| push (r2)
+603| push (r3)
+604| rmem (r1) 2732
+605| rmem (r0) 2733
+606| eq (r0) (r0) (r1)
+607| jt (r0) 2770
+608| rmem (r0) 2732
+609| add (r0) (r0) 4
+610| rmem (r0) (r0)
+611| jf (r0) 2770
+612| call (r0)
+613| rmem (r1) 2732
+614| rmem (r0) 2733
+615| eq (r0) (r0) (r1)
+616| jt (r0) 2791
+617| set (r0) 25974
+618| wmem (r0) 0
+619| call 2964
+620| wmem 2733 (r1)
+621| push (r0)
+622| push (r1)
+623| push (r2)
+624| set (r0) 27414
+625| set (r1) 1531
+626| add (r2) 60 47
+627| call 1458
+628| pop (r2)
+629| pop (r1)
+630| pop (r0)
+631| set (r0) 32
+632| set (r1) 25974
+633| call 1767
+634| out
+635| out
+636| set (r0) 25974
+637| set (r1) 32
+638| call 1571
+639| eq (r1) (r0) 32767
+640| jf (r1) 2848
+641| rmem (r0) 25974
+642| set (r2) (r0)
+643| rmem (r1) 25974
+644| push (r1)
+645| wmem 25974 (r2)
+646| set (r0) 27398
+647| set (r1) 25974
+648| call 1588
+649| pop (r1)
+650| wmem 25974 (r1)
+651| eq (r1) (r0) 32767
+652| jf (r1) 2885
+653| set (r0) 0
+654| set (r2) 0
+655| add (r1) 27406 1
+656| add (r1) (r1) (r0)
+657| rmem (r1) (r1)
+658| rmem (r3) 25974
+659| eq (r3) (r3) (r2)
+660| jt (r3) 2944
+661| mult (r0) (r2) 32767
+662| rmem (r3) 25974
+663| add (r3) (r0) (r3)
+664| jf (r2) 2924
+665| add (r3) (r3) 32767
+666| mod (r3) (r3) 32
+667| add (r0) 25974 (r2)
+668| jf (r2) 2939
+669| add (r0) (r0) 1
+670| wmem (r0) (r3)
+671| jmp 2950
+672| set (r0) 25974
+673| wmem (r0) 0
+674| call (r1)
+675| jt (r1) 2742
+676| pop (r3)
+677| pop (r2)
+678| pop (r1)
+679| pop (r0)
+680| ret
+681| push (r0)
+682| push (r1)
+683| push (r2)
+684| rmem (r1) (r0)
+685| jf (r1) 3032
+686| call 5921
+687| jf (r0) 3006
+688| push (r0)
+689| call 5990
+690| set (r1) (r0)
+691| pop (r0)
+692| jf (r1) 3006
+693| add (r1) (r0) 1
+694| rmem (r0) (r1)
+695| call 1518
+696| out
+697| jmp 3238
+698| push (r0)
+699| push (r1)
+700| push (r2)
+701| set (r0) 27432
+702| set (r1) 1531
+703| add (r2) 586 14505
+704| call 1458
+705| pop (r2)
+706| pop (r1)
+707| pop (r0)
+708| jmp 3238
+709| rmem (r0) 2732
+710| push (r0)
+711| out ==
+712| add (r0) (r0) 0
+713| rmem (r0) (r0)
+714| call 1518
+715| out  ==
+716| pop (r0)
+717| push (r0)
+718| add (r0) (r0) 1
+719| rmem (r0) (r0)
+720| rmem (r1) (r0)
+721| eq (r1) (r1) 2
+722| jf (r1) 3104
+723| push (r0)
+724| set (r0) 2680
+725| call 5990
+726| set (r1) (r0)
+727| pop (r0)
+728| add (r0) (r0) 1
+729| add (r0) (r0) (r1)
+730| rmem (r0) (r0)
+731| call 1518
+732| out
+733| pop (r0)
+734| push (r0)
+735| call 5823
+736| jf (r0) 3146
+737| push (r0)
+738| push (r1)
+739| push (r2)
+740| set (r0) 27455
+741| set (r1) 1531
+742| add (r2) 18257 5031
+743| call 1458
+744| pop (r2)
+745| pop (r1)
+746| pop (r0)
+747| rmem (r2) 2732
+748| call 5876
+749| pop (r0)
+750| push (r0)
+751| add (r0) (r0) 2
+752| rmem (r0) (r0)
+753| rmem (r0) (r0)
+754| eq (r2) (r0) 1
+755| out
+756| out There
+757| jt (r2) 3189
+758| out ar
+759| jmp 3193
+760| out is
+761| call 2001
+762| out  exi
+763| eq (r2) (r0) 1
+764| jt (r2) 3216
+765| out s:
+766| pop (r0)
+767| push (r0)
+768| add (r0) (r0) 2
+769| rmem (r0) (r0)
+770| set (r1) 5814
+771| call 1458
+772| pop (r0)
+773| pop (r2)
+774| pop (r1)
+775| pop (r0)
+776| ret
+777| push (r0)
+778| push (r1)
+779| push (r2)
+780| set (r1) (r0)
+781| rmem (r0) 2732
+782| add (r0) (r0) 2
+783| rmem (r0) (r0)
+784| call 1588
+785| eq (r2) (r0) 32767
+786| jt (r2) 3302
+787| rmem (r2) 2732
+788| add (r2) (r2) 3
+789| rmem (r2) (r2)
+790| add (r2) (r2) 1
+791| add (r2) (r2) (r0)
+792| rmem (r2) (r2)
+793| wmem 2732 (r2)
+794| wmem 2733 0
+795| jmp 3326
+796| push (r0)
+797| push (r1)
+798| push (r2)
+799| set (r0) 27482
+800| set (r1) 1531
+801| add (r2) 540 12126
+802| call 1458
+803| pop (r2)
+804| pop (r1)
+805| pop (r0)
+806| pop (r2)
+807| pop (r1)
+808| pop (r0)
+809| ret
+810| push (r0)
+811| push (r0)
+812| push (r1)
+813| push (r2)
+814| set (r0) 27532
+815| set (r1) 1531
+816| add (r2) 2537 13053
+817| call 1458
+818| pop (r2)
+819| pop (r1)
+820| pop (r0)
+821| pop (r0)
+822| ret
+823| push (r0)
+824| push (r2)
+825| push (r0)
+826| push (r1)
+827| push (r2)
+828| set (r0) 28037
+829| set (r1) 1531
+830| add (r2) 4734 117
+831| call 1458
+832| pop (r2)
+833| pop (r1)
+834| pop (r0)
+835| set (r2) 0
+836| call 5876
+837| pop (r2)
+838| pop (r0)
+839| ret
+840| push (r0)
+841| push (r1)
+842| push (r2)
+843| call 5921
+844| jf (r0) 3457
+845| add (r1) (r0) 2
+846| rmem (r0) (r1)
+847| rmem (r2) 2732
+848| eq (r2) (r0) (r2)
+849| jf (r2) 3457
+850| wmem (r1) 0
+851| push (r0)
+852| push (r1)
+853| push (r2)
+854| set (r0) 28054
+855| set (r1) 1531
+856| add (r2) 212 2849
+857| call 1458
+858| pop (r2)
+859| pop (r1)
+860| pop (r0)
+861| jmp 3481
+862| push (r0)
+863| push (r1)
+864| push (r2)
+865| set (r0) 28062
+866| set (r1) 1531
+867| add (r2) 30379 1346
+868| call 1458
+869| pop (r2)
+870| pop (r1)
+871| pop (r0)
+872| pop (r2)
+873| pop (r1)
+874| pop (r0)
+875| ret
+876| push (r0)
+877| push (r1)
+878| call 5921
+879| jf (r0) 3539
+880| add (r1) (r0) 2
+881| rmem (r0) (r1)
+882| jt (r0) 3539
+883| rmem (r0) 2732
+884| wmem (r1) (r0)
+885| push (r0)
+886| push (r1)
+887| push (r2)
+888| set (r0) 28090
+889| set (r1) 1531
+890| add (r2) 163 704
+891| call 1458
+892| pop (r2)
+893| pop (r1)
+894| pop (r0)
+895| jmp 3563
+896| push (r0)
+897| push (r1)
+898| push (r2)
+899| set (r0) 28100
+900| set (r1) 1531
+901| add (r2) 8150 9486
+902| call 1458
+903| pop (r2)
+904| pop (r1)
+905| pop (r0)
+906| pop (r1)
+907| pop (r0)
+908| ret
+909| push (r0)
+910| push (r1)
+911| call 5921
+912| jf (r0) 3601
+913| add (r1) (r0) 2
+914| rmem (r1) (r1)
+915| jt (r1) 3601
+916| add (r1) (r0) 3
+917| rmem (r1) (r1)
+918| jf (r1) 3627
+919| call (r1)
+920| jmp 3651
+921| push (r0)
+922| push (r1)
+923| push (r2)
+924| set (r0) 28135
+925| set (r1) 1531
+926| add (r2) 17671 8554
+927| call 1458
+928| pop (r2)
+929| pop (r1)
+930| pop (r0)
+931| jmp 3651
+932| push (r0)
+933| push (r1)
+934| push (r2)
+935| set (r0) 28170
+936| set (r1) 1531
+937| add (r2) 2435 19446
+938| call 1458
+939| pop (r2)
+940| pop (r1)
+941| pop (r0)
+942| pop (r1)
+943| pop (r0)
+944| ret
+945| push (r0)
+946| push (r1)
+947| push (r2)
+948| set (r0) 2680
+949| call 5990
+950| jt (r0) 3694
+951| add (r0) 2676 2
+952| wmem (r0) 32767
+953| add (r0) 2680 2
+954| wmem (r0) 32767
+955| add (r0) 2672 2
+956| wmem (r0) 32767
+957| wmem 2732 2648
+958| pop (r2)
+959| pop (r1)
+960| pop (r0)
+961| ret
+962| push (r0)
+963| push (r1)
+964| push (r2)
+965| set (r0) 28204
+966| set (r1) 1531
+967| add (r2) 4489 1781
+968| call 1458
+969| pop (r2)
+970| pop (r1)
+971| pop (r0)
+972| halt
+973| halt
+974| push (r1)
+975| rmem (r1) 3726
+976| or (r1) (r1) (r0)
+977| wmem 3726 (r1)
+978| pop (r1)
+979| ret
+980| wmem 3726 0
+981| ret
+982| push (r0)
+983| set (r0) 1
+984| call 3727
+985| pop (r0)
+986| ret
+987| push (r0)
+988| set (r0) 2
+989| call 3727
+990| pop (r0)
+991| ret
+992| push (r0)
+993| set (r0) 4
+994| call 3727
+995| pop (r0)
+996| ret
+997| push (r0)
+998| set (r0) 8
+999| call 3727
+1000| pop (r0)
+1001| ret
+1002| push (r0)
+1003| set (r0) 16
+1004| call 3727
+1005| pop (r0)
+1006| ret
+1007| push (r0)
+1008| set (r0) 32
+1009| call 3727
+1010| pop (r0)
+1011| ret
+1012| push (r0)
+1013| push (r1)
+1014| push (r2)
+1015| push (r3)
+1016| set (r0) 64
+1017| call 3727
+1018| push (r0)
+1019| push (r1)
+1020| push (r2)
+1021| set (r0) 28236
+1022| set (r1) 1531
+1023| add (r2) 2702 1112
+1024| call 1458
+1025| pop (r2)
+1026| pop (r1)
+1027| pop (r0)
+1028| rmem (r0) 3726
+1029| set (r1) 25866
+1030| set (r2) 32767
+1031| set (r3) 28299
+1032| call 1841
+1033| push (r0)
+1034| push (r1)
+1035| push (r2)
+1036| set (r0) 28303
+1037| set (r1) 1531
+1038| add (r2) 441 1220
+1039| call 1458
+1040| pop (r2)
+1041| pop (r1)
+1042| pop (r0)
+1043| wmem 2732 2417
+1044| pop (r3)
+1045| pop (r2)
+1046| pop (r1)
+1047| pop (r0)
+1048| ret
+1049| push (r0)
+1050| push (r1)
+1051| rmem (r0) 2462
+1052| rmem (r1) 27101
+1053| eq (r0) (r0) (r1)
+1054| jt (r0) 3940
+1055| push (r0)
+1056| push (r1)
+1057| push (r2)
+1058| set (r0) 28347
+1059| set (r1) 1531
+1060| add (r2) 1402 1917
+1061| call 1458
+1062| pop (r2)
+1063| pop (r1)
+1064| pop (r0)
+1065| wmem 2732 2457
+1066| wmem 2733 2457
+1067| pop (r1)
+1068| pop (r0)
+1069| ret
+1070| halt
+1071| halt
+1072| halt
+1073| halt
+1074| halt
+1075| halt
+1076| push (r0)
+1077| push (r1)
+1078| set (r0) 2
+1079| set (r1) 0
+1080| call 4218
+1081| pop (r1)
+1082| pop (r0)
+1083| ret
+1084| push (r0)
+1085| push (r1)
+1086| set (r0) 8
+1087| set (r1) 1
+1088| call 4279
+1089| pop (r1)
+1090| pop (r0)
+1091| ret
+1092| push (r0)
+1093| push (r1)
+1094| set (r0) 1
+1095| set (r1) 2
+1096| call 4218
+1097| pop (r1)
+1098| pop (r0)
+1099| ret
+1100| push (r0)
+1101| push (r1)
+1102| set (r0) 1
+1103| set (r1) 3
+1104| call 4279
+1105| call 4533
+1106| pop (r1)
+1107| pop (r0)
+1108| ret
+1109| push (r0)
+1110| push (r1)
+1111| set (r0) 4
+1112| set (r1) 4
+1113| call 4279
+1114| pop (r1)
+1115| pop (r0)
+1116| ret
+1117| push (r0)
+1118| push (r1)
+1119| set (r0) 2
+1120| set (r1) 5
+1121| call 4218
+1122| pop (r1)
+1123| pop (r0)
+1124| ret
+1125| push (r0)
+1126| push (r1)
+1127| set (r0) 11
+1128| set (r1) 6
+1129| call 4279
+1130| pop (r1)
+1131| pop (r0)
+1132| ret
+1133| push (r0)
+1134| push (r1)
+1135| set (r0) 2
+1136| set (r1) 7
+1137| call 4218
+1138| pop (r1)
+1139| pop (r0)
+1140| ret
+1141| push (r0)
+1142| push (r1)
+1143| set (r0) 0
+1144| set (r1) 8
+1145| call 4218
+1146| pop (r1)
+1147| pop (r0)
+1148| ret
+1149| push (r0)
+1150| push (r1)
+1151| set (r0) 4
+1152| set (r1) 9
+1153| call 4279
+1154| pop (r1)
+1155| pop (r0)
+1156| ret
+1157| push (r0)
+1158| push (r1)
+1159| set (r0) 1
+1160| set (r1) 10
+1161| call 4218
+1162| pop (r1)
+1163| pop (r0)
+1164| ret
+1165| push (r0)
+1166| push (r1)
+1167| set (r0) 18
+1168| set (r1) 11
+1169| call 4279
+1170| pop (r1)
+1171| pop (r0)
+1172| ret
+1173| call 4611
+1174| ret
+1175| push (r0)
+1176| push (r1)
+1177| set (r0) 1
+1178| set (r1) 12
+1179| call 4218
+1180| pop (r1)
+1181| pop (r0)
+1182| ret
+1183| push (r0)
+1184| push (r1)
+1185| set (r0) 9
+1186| set (r1) 13
+1187| call 4279
+1188| pop (r1)
+1189| pop (r0)
+1190| ret
+1191| push (r0)
+1192| push (r1)
+1193| set (r0) 2
+1194| set (r1) 14
+1195| call 4218
+1196| pop (r1)
+1197| pop (r0)
+1198| ret
+1199| push (r0)
+1200| push (r1)
+1201| push (r2)
+1202| add (r2) 2716 2
+1203| rmem (r2) (r2)
+1204| jt (r2) 4272
+1205| call 4405
+1206| wmem 3951 (r0)
+1207| add (r1) (r0) 3945
+1208| rmem (r1) (r1)
+1209| set (r0) 26024
+1210| call 1518
+1211| set (r0) (r1)
+1212| call 1518
+1213| set (r0) 26088
+1214| call 1518
+1215| set (r0) (r1)
+1216| call 1518
+1217| out .
+1218| out
+1219| pop (r2)
+1220| pop (r1)
+1221| pop (r0)
+1222| ret
+1223| push (r0)
+1224| push (r1)
+1225| push (r2)
+1226| add (r2) 2716 2
+1227| rmem (r2) (r2)
+1228| jt (r2) 4398
+1229| call 4405
+1230| push (r0)
+1231| rmem (r0) 3951
+1232| add (r1) (r0) 3945
+1233| rmem (r1) (r1)
+1234| set (r0) 26122
+1235| call 1518
+1236| set (r0) (r1)
+1237| call 1518
+1238| set (r0) 26170
+1239| call 1518
+1240| pop (r0)
+1241| set (r1) (r0)
+1242| rmem (r0) 3952
+1243| rmem (r2) 3951
+1244| add (r2) (r2) 3948
+1245| rmem (r2) (r2)
+1246| call (r2)
+1247| jt (r1) 4391
+1248| rmem (r1) 3952
+1249| wmem 3952 (r0)
+1250| gt (r2) (r0) (r1)
+1251| jf (r2) 4369
+1252| push (r0)
+1253| set (r0) 26235
+1254| call 1518
+1255| pop (r0)
+1256| gt (r2) (r1) (r0)
+1257| jf (r2) 4385
+1258| push (r0)
+1259| set (r0) 26267
+1260| call 1518
+1261| pop (r0)
+1262| out
+1263| out
+1264| jmp 4398
+1265| call 4660
+1266| set (r0) 26299
+1267| call 1518
+1268| pop (r2)
+1269| pop (r1)
+1270| pop (r0)
+1271| ret
+1272| push (r0)
+1273| push (r1)
+1274| push (r2)
+1275| push (r3)
+1276| push (r4)
+1277| push (r5)
+1278| rmem (r5) 3953
+1279| gt (r3) (r5) 29999
+1280| jt (r3) 4434
+1281| add (r5) (r5) 1
+1282| wmem 3953 (r5)
+1283| set (r3) (r0)
+1284| set (r4) (r1)
+1285| add (r0) (r5) 2
+1286| call 2281
+1287| rmem (r1) 3954
+1288| or (r0) (r1) (r0)
+1289| set (r1) (r4)
+1290| call 2248
+1291| wmem 3954 (r0)
+1292| set (r0) 3955
+1293| add (r1) (r5) 2
+1294| set (r2) (r4)
+1295| call 4515
+1296| set (r0) 3956
+1297| mult (r1) (r5) (r5)
+1298| mult (r2) (r4) (r4)
+1299| call 4515
+1300| set (r0) 3957
+1301| set (r1) 13
+1302| mult (r2) (r3) 9
+1303| mult (r2) (r2) (r2)
+1304| call 4515
+1305| pop (r5)
+1306| pop (r4)
+1307| pop (r3)
+1308| pop (r2)
+1309| pop (r1)
+1310| pop (r0)
+1311| ret
+1312| push (r0)
+1313| rmem (r0) (r0)
+1314| call 2248
+1315| set (r1) (r2)
+1316| call 2125
+1317| pop (r1)
+1318| wmem (r1) (r0)
+1319| ret
+1320| push (r0)
+1321| add (r0) 2716 2
+1322| rmem (r0) (r0)
+1323| jt (r0) 4608
+1324| set (r0) 26321
+1325| call 1518
+1326| rmem (r0) 3952
+1327| eq (r0) (r0) 30
+1328| jt (r0) 4574
+1329| set (r0) 26354
+1330| call 1518
+1331| set (r0) 26398
+1332| call 1518
+1333| call 4660
+1334| jmp 4608
+1335| set (r0) 26440
+1336| call 1518
+1337| rmem (r0) 3954
+1338| add (r0) (r0) 1
+1339| jt (r0) 4596
+1340| set (r0) 26484
+1341| call 1518
+1342| jmp 4565
+1343| set (r0) 26584
+1344| call 1518
+1345| add (r0) 2716 2
+1346| wmem (r0) 32767
+1347| pop (r0)
+1348| ret
+1349| push (r0)
+1350| add (r0) 2716 2
+1351| rmem (r0) (r0)
+1352| jt (r0) 4657
+1353| set (r0) 26717
+1354| call 1518
+1355| rmem (r0) 2732
+1356| eq (r0) (r0) 2623
+1357| jt (r0) 4645
+1358| set (r0) 26725
+1359| call 1518
+1360| jmp 4650
+1361| set (r0) 26731
+1362| call 1518
+1363| set (r0) 26737
+1364| call 1518
+1365| call 4660
+1366| pop (r0)
+1367| ret
+1368| push (r0)
+1369| wmem 3952 22
+1370| wmem 3953 0
+1371| wmem 3954 0
+1372| wmem 3955 0
+1373| wmem 3956 0
+1374| wmem 3957 0
+1375| add (r0) 2716 2
+1376| wmem (r0) 2623
+1377| pop (r0)
+1378| ret
+1379| push (r0)
+1380| add (r0) 2716 2
+1381| rmem (r0) (r0)
+1382| eq (r0) (r0) 32767
+1383| jt (r0) 4717
+1384| set (r0) 26824
+1385| call 1518
+1386| wmem 2732 2578
+1387| wmem 2733 2578
+1388| pop (r0)
+1389| ret
+1390| push (r0)
+1391| push (r1)
+1392| push (r2)
+1393| push (r3)
+1394| push (r0)
+1395| push (r1)
+1396| push (r2)
+1397| set (r0) 28369
+1398| set (r1) 1531
+1399| add (r2) 7025 374
+1400| call 1458
+1401| pop (r2)
+1402| pop (r1)
+1403| pop (r0)
+1404| set (r0) 4242
+1405| set (r1) 25866
+1406| set (r2) 32767
+1407| set (r3) 28397
+1408| call 1841
+1409| push (r0)
+1410| push (r1)
+1411| push (r2)
+1412| set (r0) 28401
+1413| set (r1) 1531
+1414| add (r2) 3110 7373
+1415| call 1458
+1416| pop (r2)
+1417| pop (r1)
+1418| pop (r0)
+1419| pop (r3)
+1420| pop (r2)
+1421| pop (r1)
+1422| pop (r0)
+1423| ret
+1424| push (r0)
+1425| add (r0) 2672 2
+1426| rmem (r0) (r0)
+1427| jt (r0) 4858
+1428| add (r0) 2684 2
+1429| wmem (r0) 32767
+1430| add (r0) 2672 2
+1431| wmem (r0) 32767
+1432| add (r0) 2676 2
+1433| wmem (r0) 0
+1434| push (r0)
+1435| push (r1)
+1436| push (r2)
+1437| set (r0) 28453
+1438| set (r1) 1531
+1439| add (r2) 4553 537
+1440| call 1458
+1441| pop (r2)
+1442| pop (r1)
+1443| pop (r0)
+1444| jmp 4882
+1445| push (r0)
+1446| push (r1)
+1447| push (r2)
+1448| set (r0) 28510
+1449| set (r1) 1531
+1450| add (r2) 3772 1830
+1451| call 1458
+1452| pop (r2)
+1453| pop (r1)
+1454| pop (r0)
+1455| pop (r0)
+1456| ret
+1457| push (r0)
+1458| add (r0) 2676 2
+1459| wmem (r0) 32767
+1460| add (r0) 2680 2
+1461| wmem (r0) 0
+1462| push (r0)
+1463| push (r1)
+1464| push (r2)
+1465| set (r0) 28569
+1466| set (r1) 1531
+1467| add (r2) 1160 7916
+1468| call 1458
+1469| pop (r2)
+1470| pop (r1)
+1471| pop (r0)
+1472| wmem 2733 0
+1473| pop (r0)
+1474| ret
+1475| push (r0)
+1476| add (r0) 2676 2
+1477| wmem (r0) 0
+1478| add (r0) 2680 2
+1479| wmem (r0) 32767
+1480| push (r0)
+1481| push (r1)
+1482| push (r2)
+1483| set (r0) 28595
+1484| set (r1) 1531
+1485| add (r2) 6330 16168
+1486| call 1458
+1487| pop (r2)
+1488| pop (r1)
+1489| pop (r0)
+1490| wmem 2733 0
+1491| pop (r0)
+1492| ret
+1493| push (r2)
+1494| push (r3)
+1495| rmem (r2) 2732
+1496| eq (r2) (r2) 2457
+1497| jt (r2) 5017
+1498| push (r0)
+1499| push (r1)
+1500| push (r2)
+1501| set (r0) 28621
+1502| set (r1) 1531
+1503| add (r2) 5144 91
+1504| call 1458
+1505| pop (r2)
+1506| pop (r1)
+1507| pop (r0)
+1508| jmp 5336
+1509| add (r2) (r0) 2
+1510| wmem (r2) 32767
+1511| rmem (r2) 2462
+1512| add (r2) (r2) 27095
+1513| add (r2) (r2) 1
+1514| rmem (r2) (r2)
+1515| add (r3) 2457 1
+1516| rmem (r3) (r3)
+1517| add (r3) (r3) (r2)
+1518| add (r2) (r1) 48
+1519| wmem (r3) (r2)
+1520| rmem (r2) 2462
+1521| add (r2) (r2) 27101
+1522| add (r2) (r2) 1
+1523| wmem (r2) (r1)
+1524| push (r0)
+1525| push (r0)
+1526| push (r1)
+1527| push (r2)
+1528| set (r0) 28664
+1529| set (r1) 1531
+1530| add (r2) 5116 3051
+1531| call 1458
+1532| pop (r2)
+1533| pop (r1)
+1534| pop (r0)
+1535| pop (r0)
+1536| push (r0)
+1537| add (r2) (r0) 0
+1538| rmem (r0) (r2)
+1539| call 1518
+1540| pop (r0)
+1541| push (r0)
+1542| push (r0)
+1543| push (r1)
+1544| push (r2)
+1545| set (r0) 28679
+1546| set (r1) 1531
+1547| add (r2) 13519 2339
+1548| call 1458
+1549| pop (r2)
+1550| pop (r1)
+1551| pop (r0)
+1552| pop (r0)
+1553| rmem (r2) 2462
+1554| add (r2) (r2) 1
+1555| wmem 2462 (r2)
+1556| rmem (r3) 27101
+1557| eq (r3) (r2) (r3)
+1558| jf (r3) 5336
+1559| set (r0) 0
+1560| add (r1) 27101 1
+1561| rmem (r1) (r1)
+1562| add (r0) (r0) (r1)
+1563| add (r1) 27101 2
+1564| rmem (r1) (r1)
+1565| add (r2) 27101 3
+1566| rmem (r2) (r2)
+1567| mult (r2) (r2) (r2)
+1568| mult (r1) (r1) (r2)
+1569| add (r0) (r0) (r1)
+1570| add (r1) 27101 4
+1571| rmem (r1) (r1)
+1572| mult (r2) (r1) (r1)
+1573| mult (r2) (r2) (r1)
+1574| add (r0) (r0) (r2)
+1575| add (r1) 27101 5
+1576| rmem (r1) (r1)
+1577| mult (r1) (r1) 32767
+1578| add (r0) (r0) (r1)
+1579| eq (r1) (r0) 399
+1580| jt (r1) 5312
+1581| add (r2) 2688 2
+1582| wmem (r2) 2457
+1583| add (r2) 2692 2
+1584| wmem (r2) 2457
+1585| add (r2) 2696 2
+1586| wmem (r2) 2457
+1587| add (r2) 2700 2
+1588| wmem (r2) 2457
+1589| add (r2) 2704 2
+1590| wmem (r2) 2457
+1591| wmem 2462 0
+1592| set (r0) 27095
+1593| set (r1) 5341
+1594| call 1458
+1595| push (r0)
+1596| push (r1)
+1597| push (r2)
+1598| set (r0) 28710
+1599| set (r1) 1531
+1600| add (r2) 4503 8917
+1601| call 1458
+1602| pop (r2)
+1603| pop (r1)
+1604| pop (r0)
+1605| jmp 5336
+1606| push (r0)
+1607| push (r1)
+1608| push (r2)
+1609| set (r0) 28777
+1610| set (r1) 1531
+1611| add (r2) 8024 19363
+1612| call 1458
+1613| pop (r2)
+1614| pop (r1)
+1615| pop (r0)
+1616| pop (r3)
+1617| pop (r2)
+1618| ret
+1619| push (r2)
+1620| add (r2) 2457 1
+1621| rmem (r2) (r2)
+1622| add (r2) (r2) (r0)
+1623| wmem (r2) 95
+1624| pop (r2)
+1625| ret
+1626| push (r0)
+1627| push (r1)
+1628| set (r0) 2688
+1629| set (r1) 2
+1630| call 4977
+1631| pop (r1)
+1632| pop (r0)
+1633| ret
+1634| push (r0)
+1635| push (r1)
+1636| set (r0) 2692
+1637| set (r1) 3
+1638| call 4977
+1639| pop (r1)
+1640| pop (r0)
+1641| ret
+1642| push (r0)
+1643| push (r1)
+1644| set (r0) 2696
+1645| set (r1) 5
+1646| call 4977
+1647| pop (r1)
+1648| pop (r0)
+1649| ret
+1650| push (r0)
+1651| push (r1)
+1652| set (r0) 2700
+1653| set (r1) 7
+1654| call 4977
+1655| pop (r1)
+1656| pop (r0)
+1657| ret
+1658| push (r0)
+1659| push (r1)
+1660| set (r0) 2704
+1661| set (r1) 9
+1662| call 4977
+1663| pop (r1)
+1664| pop (r0)
+1665| ret
+1666| push (r0)
+1667| push (r1)
+1668| push (r2)
+1669| jf (r7) 5605
+1670| push (r0)
+1671| push (r1)
+1672| push (r2)
+1673| set (r0) 28844
+1674| set (r1) 1531
+1675| add (r2) 11819 13886
+1676| call 1458
+1677| pop (r2)
+1678| pop (r1)
+1679| pop (r0)
+1680| noop
+1681| noop
+1682| noop
+1683| noop
+1684| noop
+1685| set (r0) 4
+1686| set (r1) 1
+1687| call 6027
+1688| eq (r1) (r0) 6
+1689| jf (r1) 5579
+1690| push (r0)
+1691| push (r1)
+1692| push (r2)
+1693| set (r0) 29014
+1694| set (r1) 1531
+1695| add (r2) 22145 6388
+1696| call 1458
+1697| pop (r2)
+1698| pop (r1)
+1699| pop (r0)
+1700| set (r0) (r7)
+1701| set (r1) 25866
+1702| set (r2) 32767
+1703| push (r3)
+1704| set (r3) 29241
+1705| call 1841
+1706| pop (r3)
+1707| push (r0)
+1708| push (r1)
+1709| push (r2)
+1710| set (r0) 29245
+1711| set (r1) 1531
+1712| add (r2) 11704 5804
+1713| call 1458
+1714| pop (r2)
+1715| pop (r1)
+1716| pop (r0)
+1717| wmem 2732 2498
+1718| wmem 2733 0
+1719| add (r1) 2708 2
+1720| wmem (r1) 32767
+1721| jmp 5714
+1722| push (r0)
+1723| push (r1)
+1724| push (r2)
+1725| set (r0) 29400
+1726| set (r1) 1531
+1727| add (r2) 14845 1134
+1728| call 1458
+1729| pop (r2)
+1730| pop (r1)
+1731| pop (r0)
+1732| jmp 5714
+1733| push (r0)
+1734| push (r1)
+1735| push (r2)
+1736| set (r0) 29545
+1737| set (r1) 1531
+1738| add (r2) 3501 11593
+1739| call 1458
+1740| pop (r2)
+1741| pop (r1)
+1742| pop (r0)
+1743| set (r0) 0
+1744| add (r2) 1 27101
+1745| rmem (r1) (r2)
+1746| add (r0) (r0) (r1)
+1747| mult (r0) (r0) 31660
+1748| call 2125
+1749| rmem (r1) 27101
+1750| add (r1) (r1) 27101
+1751| add (r2) (r2) 1
+1752| gt (r1) (r2) (r1)
+1753| jf (r1) 5636
+1754| set (r1) 25866
+1755| set (r2) 32767
+1756| push (r3)
+1757| set (r3) 29663
+1758| call 1841
+1759| pop (r3)
+1760| push (r0)
+1761| push (r1)
+1762| push (r2)
+1763| set (r0) 29667
+1764| set (r1) 1531
+1765| add (r2) 3890 8752
+1766| call 1458
+1767| pop (r2)
+1768| pop (r1)
+1769| pop (r0)
+1770| wmem 2732 2488
+1771| wmem 2733 0
+1772| jmp 5714
+1773| pop (r2)
+1774| pop (r1)
+1775| pop (r0)
+1776| ret
+1777| push (r0)
+1778| push (r1)
+1779| push (r2)
+1780| push (r3)
+1781| push (r0)
+1782| push (r1)
+1783| push (r2)
+1784| set (r0) 29757
+1785| set (r1) 1531
+1786| add (r2) 3158 1300
+1787| call 1458
+1788| pop (r2)
+1789| pop (r1)
+1790| pop (r0)
+1791| rmem (r0) 3955
+1792| rmem (r1) 3956
+1793| call 2125
+1794| rmem (r1) 3957
+1795| call 2125
+1796| set (r1) 25919
+1797| set (r2) 4
+1798| push (r3)
+1799| set (r3) 29942
+1800| call 1841
+1801| pop (r3)
+1802| push (r0)
+1803| push (r1)
+1804| push (r2)
+1805| set (r0) 29946
+1806| set (r1) 1531
+1807| add (r2) 8100 22872
+1808| call 1458
+1809| pop (r2)
+1810| pop (r1)
+1811| pop (r0)
+1812| pop (r3)
+1813| pop (r2)
+1814| pop (r1)
+1815| pop (r0)
+1816| ret
+1817| out -
+1818| call 1518
+1819| out
+1820| ret
+1821| push (r1)
+1822| push (r2)
+1823| set (r0) 27381
+1824| set (r1) 5846
+1825| set (r2) 0
+1826| call 1458
+1827| set (r0) (r2)
+1828| pop (r2)
+1829| pop (r1)
+1830| ret
+1831| push (r3)
+1832| push (r4)
+1833| rmem (r3) 2732
+1834| add (r4) (r0) 2
+1835| rmem (r4) (r4)
+1836| eq (r3) (r3) (r4)
+1837| jf (r3) 5871
+1838| add (r2) (r2) 1
+1839| pop (r4)
+1840| pop (r3)
+1841| ret
+1842| push (r0)
+1843| push (r1)
+1844| set (r0) 27381
+1845| set (r1) 5893
+1846| call 1458
+1847| pop (r1)
+1848| pop (r0)
+1849| ret
+1850| push (r3)
+1851| add (r3) (r0) 2
+1852| rmem (r3) (r3)
+1853| eq (r3) (r2) (r3)
+1854| jf (r3) 5918
+1855| add (r0) (r0) 0
+1856| rmem (r0) (r0)
+1857| call 5814
+1858| pop (r3)
+1859| ret
+1860| push (r1)
+1861| push (r2)
+1862| set (r2) (r0)
+1863| set (r0) 27381
+1864| set (r1) 5964
+1865| call 1543
+1866| eq (r1) (r0) 32767
+1867| jt (r1) 5956
+1868| add (r1) 27381 (r0)
+1869| add (r1) (r1) 1
+1870| rmem (r0) (r1)
+1871| jmp 5959
+1872| set (r0) 0
+1873| pop (r2)
+1874| pop (r1)
+1875| ret
+1876| push (r1)
+1877| set (r1) (r2)
+1878| add (r0) (r0) 0
+1879| rmem (r0) (r0)
+1880| call 1667
+1881| pop (r1)
+1882| jf (r0) 5989
+1883| set (r2) (r1)
+1884| set (r1) 32767
+1885| ret
+1886| push (r1)
+1887| push (r2)
+1888| add (r0) (r0) 2
+1889| rmem (r0) (r0)
+1890| jf (r0) 6019
+1891| rmem (r1) 2732
+1892| eq (r1) (r0) (r1)
+1893| jt (r1) 6019
+1894| set (r0) 0
+1895| jmp 6022
+1896| set (r0) 1
+1897| pop (r2)
+1898| pop (r1)
+1899| ret
+1900| jt (r0) 6035
+1901| add (r0) (r1) 1
+1902| ret
+1903| jt (r1) 6048
+1904| add (r0) (r0) 32767
+1905| set (r1) (r7)
+1906| call 6027
+1907| ret
+1908| push (r0)
+1909| add (r1) (r1) 32767
+1910| call 6027
+1911| set (r1) (r0)
+1912| pop (r0)
+1913| add (r0) (r0) 32767
+1914| call 6027
+1915| ret
+1916| in 16435
+1917| push 21392
+1918| rmem 21237 10070
+1919| or 24401 14955 6512
+1920| call 8083
+1921| wmem 7897 16300
+1922| call 8889
+1923| gt 11120 21024 31428
+1924| rmem 12193 23244
+1925| push 21442
+1926| ret
+1927| halt
+1928| halt
+1929| halt
+1930| halt
+1931| halt
+1932| halt
+1933| halt
+1934| halt
+1935| halt
+1936| halt
+1937| halt
+1938| halt
+1939| halt
+1940| halt
+1941| halt
+1942| halt
+1943| halt
+1944| halt
+1945| halt
+1946| halt
+1947| halt
+1948| halt
+1949| halt
+1950| halt
+1951| halt
+1952| halt
+1953| halt
+1954| halt
+1955| halt
+1956| halt
+1957| halt
+1958| halt
+1959| halt
+1960| halt
+1961| halt
+1962| halt
+1963| halt
+1964| halt
+1965| halt
+1966| halt
+1967| halt
+1968| halt
+1969| halt
+1970| halt
+1971| halt
+1972| halt
+1973| halt
+1974| halt
+1975| halt
+1976| halt
+1977| halt
+1978| halt
+1979| halt
+1980| halt
+1981| halt
+1982| halt
+1983| halt
+1984| halt
+1985| halt
+1986| halt
+1987| halt
+1988| halt
+1989| halt
+1990| halt
+1991| halt
+1992| halt
+1993| halt
+1994| halt
+1995| halt
+1996| halt
+1997| halt
+1998| halt
+1999| halt
+2000| halt
+2001| halt
+2002| halt
+2003| halt
+2004| halt
+2005| halt
+2006| halt
+2007| halt
+2008| halt
+2009| halt
+2010| halt
+2011| halt
+2012| halt
+2013| halt
+2014| halt
+2015| halt
+2016| halt
+2017| halt
+2018| halt
+2019| halt
+2020| halt
+2021| halt
+2022| halt
+2023| halt
+2024| halt
+2025| halt
+2026| halt
+2027| halt
+2028| halt
+2029| halt
+2030| halt
+2031| halt
+2032| halt
+2033| halt
+2034| halt
+2035| halt
+2036| halt
+2037| halt
+2038| halt
+2039| halt
+2040| halt
+2041| halt
+2042| halt
+2043| halt
+2044| halt
+2045| halt
+2046| halt
+2047| halt
+2048| halt
+2049| halt
+2050| halt
+2051| halt
+2052| halt
+2053| halt
+2054| halt
+2055| halt
+2056| halt
+2057| halt
+2058| halt
+2059| halt
+2060| halt
+2061| halt
+2062| halt
+2063| halt
+2064| halt
+2065| halt
+2066| halt
+2067| halt
+2068| halt
+2069| halt
+2070| halt
+2071| halt
+2072| halt
+2073| halt
+2074| halt
+2075| halt
+2076| halt
+2077| halt
+2078| halt
+2079| halt
+2080| halt
+2081| halt
+2082| halt
+2083| halt
+2084| halt
+2085| halt
+2086| halt
+2087| halt
+2088| halt
+2089| halt
+2090| halt
+2091| halt
+2092| halt
+2093| halt
+2094| halt
+2095| halt
+2096| halt
+2097| halt
+2098| halt
+2099| halt
+2100| halt
+2101| halt
+2102| halt
+2103| halt
+2104| halt
+2105| halt
+2106| halt
+2107| halt
+2108| halt
+2109| halt
+2110| halt
+2111| halt
+2112| halt
+2113| halt
+2114| halt
+2115| halt
+2116| halt
+2117| halt
+2118| halt
+2119| halt
+2120| halt
+2121| halt
+2122| halt
+2123| halt
+2124| halt
+2125| halt
+2126| halt
+2127| halt
+2128| halt
+2129| halt
+2130| halt
+2131| halt
+2132| halt
+2133| halt
+2134| halt
+2135| halt
+2136| halt
+2137| halt
+2138| halt
+2139| halt
+2140| halt
+2141| halt
+2142| halt
+2143| halt
+2144| halt
+2145| halt
+2146| halt
+2147| halt
+2148| halt
+2149| halt
+2150| halt
+2151| halt
+2152| halt
+2153| halt
+2154| halt
+2155| halt
+2156| halt
+2157| halt
+2158| halt
+2159| halt
+2160| halt
+2161| halt
+2162| halt
+2163| halt
+2164| halt
+2165| halt
+2166| halt
+2167| halt
+2168| halt
+2169| halt
+2170| halt
+2171| halt
+2172| halt
+2173| halt
+2174| halt
+2175| halt
+2176| halt
+2177| halt
+2178| halt
+2179| halt
+2180| halt
+2181| halt
+2182| halt
+2183| halt
+2184| halt
+2185| halt
+2186| halt
+2187| halt
+2188| halt
+2189| halt
+2190| halt
+2191| halt
+2192| halt
+2193| halt
+2194| halt
+2195| halt
+2196| halt
+2197| halt
+2198| halt
+2199| halt
+2200| halt
+2201| halt
+2202| halt
+2203| halt
+2204| halt
+2205| halt
+2206| halt
+2207| halt
+2208| halt
+2209| halt
+2210| halt
+2211| halt
+2212| halt
+2213| halt
+2214| halt
+2215| halt
+2216| halt
+2217| halt
+2218| halt
+2219| halt
+2220| halt
+2221| halt
+2222| halt
+2223| halt
+2224| halt
+2225| halt
+2226| halt
+2227| halt
+2228| halt
+2229| halt
+2230| halt
+2231| halt
+2232| halt
+2233| halt
+2234| halt
+2235| halt
+2236| halt
+2237| halt
+2238| halt
+2239| halt
+2240| halt
+2241| halt
+2242| halt
+2243| halt
+2244| halt
+2245| halt
+2246| halt
+2247| halt
+2248| halt
+2249| halt
+2250| halt
+2251| halt
+2252| halt
+2253| halt
+2254| halt
+2255| halt
+2256| halt
+2257| halt
+2258| halt
+2259| halt
+2260| halt
+2261| halt
+2262| halt
+2263| halt
+2264| halt
+2265| halt
+2266| halt
+2267| halt
+2268| halt
+2269| halt
+2270| halt
+2271| halt
+2272| halt
+2273| halt
+2274| halt
+2275| halt
+2276| halt
+2277| halt
+2278| halt
+2279| halt
+2280| halt
+2281| halt
+2282| halt
+2283| halt
+2284| halt
+2285| halt
+2286| halt
+2287| halt
+2288| halt
+2289| halt
+2290| halt
+2291| halt
+2292| halt
+2293| halt
+2294| halt
+2295| halt
+2296| halt
+2297| halt
+2298| halt
+2299| halt
+2300| halt
+2301| halt
+2302| halt
+2303| halt
+2304| halt
+2305| halt
+2306| halt
+2307| halt
+2308| halt
+2309| halt
+2310| halt
+2311| halt
+2312| halt
+2313| halt
+2314| halt
+2315| halt
+2316| halt
+2317| halt
+2318| halt
+2319| halt
+2320| halt
+2321| halt
+2322| halt
+2323| halt
+2324| halt
+2325| halt
+2326| halt
+2327| halt
+2328| halt
+2329| halt
+2330| halt
+2331| halt
+2332| halt
+2333| halt
+2334| halt
+2335| halt
+2336| halt
+2337| halt
+2338| halt
+2339| halt
+2340| halt
+2341| halt
+2342| halt
+2343| halt
+2344| halt
+2345| halt
+2346| halt
+2347| halt
+2348| halt
+2349| halt
+2350| halt
+2351| halt
+2352| halt
+2353| halt
+2354| halt
+2355| halt
+2356| halt
+2357| halt
+2358| halt
+2359| halt
+2360| halt
+2361| halt
+2362| halt
+2363| halt
+2364| halt
+2365| halt
+2366| halt
+2367| halt
+2368| halt
+2369| halt
+2370| halt
+2371| halt
+2372| halt
+2373| halt
+2374| halt
+2375| halt
+2376| halt
+2377| halt
+2378| halt
+2379| halt
+2380| halt
+2381| halt
+2382| halt
+2383| halt
+2384| halt
+2385| halt
+2386| halt
+2387| halt
+2388| halt
+2389| halt
+2390| halt
+2391| halt
+2392| halt
+2393| halt
+2394| halt
+2395| halt
+2396| halt
+2397| halt
+2398| halt
+2399| halt
+2400| halt
+2401| halt
+2402| halt
+2403| halt
+2404| halt
+2405| halt
+2406| halt
+2407| halt
+2408| halt
+2409| halt
+2410| halt
+2411| halt
+2412| halt
+2413| halt
+2414| halt
+2415| halt
+2416| halt
+2417| halt
+2418| halt
+2419| halt
+2420| halt
+2421| halt
+2422| halt
+2423| halt
+2424| halt
+2425| halt
+2426| halt
+2427| halt
+2428| halt
+2429| halt
+2430| halt
+2431| halt
+2432| halt
+2433| halt
+2434| halt
+2435| halt
+2436| halt
+2437| halt
+2438| halt
+2439| halt
+2440| halt
+2441| halt
+2442| halt
+2443| halt
+2444| halt
+2445| halt
+2446| halt
+2447| halt
+2448| halt
+2449| halt
+2450| halt
+2451| halt
+2452| halt
+2453| halt
+2454| halt
+2455| halt
+2456| halt
+2457| halt
+2458| halt
+2459| halt
+2460| halt
+2461| halt
+2462| halt
+2463| halt
+2464| halt
+2465| halt
+2466| halt
+2467| halt
+2468| halt
+2469| halt
+2470| halt
+2471| halt
+2472| halt
+2473| halt
+2474| halt
+2475| halt
+2476| halt
+2477| halt
+2478| halt
+2479| halt
+2480| halt
+2481| halt
+2482| halt
+2483| halt
+2484| halt
+2485| halt
+2486| halt
+2487| halt
+2488| halt
+2489| halt
+2490| halt
+2491| halt
+2492| halt
+2493| halt
+2494| halt
+2495| halt
+2496| halt
+2497| halt
+2498| halt
+2499| halt
+2500| halt
+2501| halt
+2502| halt
+2503| halt
+2504| halt
+2505| halt
+2506| halt
+2507| halt
+2508| halt
+2509| halt
+2510| halt
+2511| halt
+2512| halt
+2513| halt
+2514| halt
+2515| halt
+2516| halt
+2517| halt
+2518| halt
+2519| halt
+2520| halt
+2521| halt
+2522| halt
+2523| halt
+2524| halt
+2525| halt
+2526| halt
+2527| halt
+2528| halt
+2529| halt
+2530| halt
+2531| halt
+2532| halt
+2533| halt
+2534| halt
+2535| halt
+2536| halt
+2537| halt
+2538| halt
+2539| halt
+2540| halt
+2541| halt
+2542| halt
+2543| halt
+2544| halt
+2545| halt
+2546| halt
+2547| halt
+2548| halt
+2549| halt
+2550| halt
+2551| halt
+2552| halt
+2553| halt
+2554| halt
+2555| halt
+2556| halt
+2557| halt
+2558| halt
+2559| halt
+2560| halt
+2561| halt
+2562| halt
+2563| halt
+2564| halt
+2565| halt
+2566| halt
+2567| halt
+2568| halt
+2569| halt
+2570| halt
+2571| halt
+2572| halt
+2573| halt
+2574| halt
+2575| halt
+2576| halt
+2577| halt
+2578| halt
+2579| halt
+2580| halt
+2581| halt
+2582| halt
+2583| halt
+2584| halt
+2585| halt
+2586| halt
+2587| halt
+2588| halt
+2589| halt
+2590| halt
+2591| halt
+2592| halt
+2593| halt
+2594| halt
+2595| halt
+2596| halt
+2597| halt
+2598| halt
+2599| halt
+2600| halt
+2601| halt
+2602| halt
+2603| halt
+2604| halt
+2605| halt
+2606| halt
+2607| halt
+2608| halt
+2609| halt
+2610| halt
+2611| halt
+2612| halt
+2613| halt
+2614| halt
+2615| halt
+2616| halt
+2617| halt
+2618| halt
+2619| halt
+2620| halt
+2621| halt
+2622| halt
+2623| halt
+2624| halt
+2625| halt
+2626| halt
+2627| halt
+2628| halt
+2629| halt
+2630| halt
+2631| halt
+2632| halt
+2633| halt
+2634| halt
+2635| halt
+2636| halt
+2637| halt
+2638| halt
+2639| halt
+2640| halt
+2641| halt
+2642| halt
+2643| halt
+2644| halt
+2645| halt
+2646| halt
+2647| halt
+2648| halt
+2649| halt
+2650| halt
+2651| halt
+2652| halt
+2653| halt
+2654| halt
+2655| halt
+2656| halt
+2657| halt
+2658| halt
+2659| halt
+2660| halt
+2661| halt
+2662| halt
+2663| halt
+2664| halt
+2665| halt
+2666| halt
+2667| halt
+2668| halt
+2669| halt
+2670| halt
+2671| halt
+2672| halt
+2673| halt
+2674| halt
+2675| halt
+2676| halt
+2677| halt
+2678| halt
+2679| halt
+2680| halt
+2681| halt
+2682| halt
+2683| halt
+2684| halt
+2685| halt
+2686| halt
+2687| halt
+2688| halt
+2689| halt
+2690| halt
+2691| halt
+2692| halt
+2693| halt
+2694| halt
+2695| halt
+2696| halt
+2697| halt
+2698| halt
+2699| halt
+2700| halt
+2701| halt
+2702| halt
+2703| halt
+2704| halt
+2705| halt
+2706| halt
+2707| halt
+2708| halt
+2709| halt
+2710| halt
+2711| halt
+2712| halt
+2713| halt
+2714| halt
+2715| halt
+2716| halt
+2717| halt
+2718| halt
+2719| halt
+2720| halt
+2721| halt
+2722| halt
+2723| halt
+2724| halt
+2725| halt
+2726| halt
+2727| halt
+2728| halt
+2729| halt
+2730| halt
+2731| halt
+2732| halt
+2733| halt
+2734| halt
+2735| halt
+2736| halt
+2737| halt
+2738| halt
+2739| halt
+2740| halt
+2741| halt
+2742| halt
+2743| halt
+2744| halt
+2745| halt
+2746| halt
+2747| halt
+2748| halt
+2749| halt
+2750| halt
+2751| halt
+2752| halt
+2753| halt
+2754| halt
+2755| halt
+2756| halt
+2757| halt
+2758| halt
+2759| halt
+2760| halt
+2761| halt
+2762| halt
+2763| halt
+2764| halt
+2765| halt
+2766| halt
+2767| halt
+2768| halt
+2769| halt
+2770| halt
+2771| halt
+2772| halt
+2773| halt
+2774| halt
+2775| halt
+2776| halt
+2777| halt
+2778| halt
+2779| halt
+2780| halt
+2781| halt
+2782| halt
+2783| halt
+2784| halt
+2785| halt
+2786| halt
+2787| halt
+2788| halt
+2789| halt
+2790| halt
+2791| halt
+2792| halt
+2793| halt
+2794| halt
+2795| halt
+2796| halt
+2797| halt
+2798| halt
+2799| halt
+2800| halt
+2801| halt
+2802| halt
+2803| halt
+2804| halt
+2805| halt
+2806| halt
+2807| halt
+2808| halt
+2809| halt
+2810| halt
+2811| halt
+2812| halt
+2813| halt
+2814| halt
+2815| halt
+2816| halt
+2817| halt
+2818| halt
+2819| halt
+2820| halt
+2821| halt
+2822| halt
+2823| halt
+2824| halt
+2825| halt
+2826| halt
+2827| halt
+2828| halt
+2829| halt
+2830| halt
+2831| halt
+2832| halt
+2833| halt
+2834| halt
+2835| halt
+2836| halt
+2837| halt
+2838| halt
+2839| halt
+2840| halt
+2841| halt
+2842| halt
+2843| halt
+2844| halt
+2845| halt
+2846| halt
+2847| halt
+2848| halt
+2849| halt
+2850| halt
+2851| halt
+2852| halt
+2853| halt
+2854| halt
+2855| halt
+2856| halt
+2857| halt
+2858| halt
+2859| halt
+2860| halt
+2861| halt
+2862| halt
+2863| halt
+2864| halt
+2865| halt
+2866| halt
+2867| halt
+2868| halt
+2869| halt
+2870| halt
+2871| halt
+2872| halt
+2873| halt
+2874| halt
+2875| halt
+2876| halt
+2877| halt
+2878| halt
+2879| halt
+2880| halt
+2881| halt
+2882| halt
+2883| halt
+2884| halt
+2885| halt
+2886| halt
+2887| halt
+2888| halt
+2889| halt
+2890| halt
+2891| halt
+2892| halt
+2893| halt
+2894| halt
+2895| halt
+2896| halt
+2897| halt
+2898| halt
+2899| halt
+2900| halt
+2901| halt
+2902| halt
+2903| halt
+2904| halt
+2905| halt
+2906| halt
+2907| halt
+2908| halt
+2909| halt
+2910| halt
+2911| halt
+2912| halt
+2913| halt
+2914| halt
+2915| halt
+2916| halt
+2917| halt
+2918| halt
+2919| halt
+2920| halt
+2921| halt
+2922| halt
+2923| halt
+2924| halt
+2925| halt
+2926| halt
+2927| halt
+2928| halt
+2929| halt
+2930| halt
+2931| halt
+2932| halt
+2933| halt
+2934| halt
+2935| halt
+2936| halt
+2937| halt
+2938| halt
+2939| halt
+2940| halt
+2941| halt
+2942| halt
+2943| halt
+2944| halt
+2945| halt
+2946| halt
+2947| halt
+2948| halt
+2949| halt
+2950| halt
+2951| halt
+2952| halt
+2953| halt
+2954| halt
+2955| halt
+2956| halt
+2957| halt
+2958| halt
+2959| halt
+2960| halt
+2961| halt
+2962| halt
+2963| halt
+2964| halt
+2965| halt
+2966| halt
+2967| halt
+2968| halt
+2969| halt
+2970| halt
+2971| halt
+2972| halt
+2973| halt
+2974| halt
+2975| halt
+2976| halt
+2977| halt
+2978| halt
+2979| halt
+2980| halt
+2981| halt
+2982| halt
+2983| halt
+2984| halt
+2985| halt
+2986| halt
+2987| halt
+2988| halt
+2989| halt
+2990| halt
+2991| halt
+2992| halt
+2993| halt
+2994| halt
+2995| halt
+2996| halt
+2997| halt
+2998| halt
+2999| halt
+3000| halt
+3001| halt
+3002| halt
+3003| halt
+3004| halt
+3005| halt
+3006| halt
+3007| halt
+3008| halt
+3009| halt
+3010| halt
+3011| halt
+3012| halt
+3013| halt
+3014| halt
+3015| halt
+3016| halt
+3017| halt
+3018| halt
+3019| halt
+3020| halt
+3021| halt
+3022| halt
+3023| halt
+3024| halt
+3025| halt
+3026| halt
+3027| halt
+3028| halt
+3029| halt
+3030| halt
+3031| halt
+3032| halt
+3033| halt
+3034| halt
+3035| halt
+3036| halt
+3037| halt
+3038| halt
+3039| halt
+3040| halt
+3041| halt
+3042| halt
+3043| halt
+3044| halt
+3045| halt
+3046| halt
+3047| halt
+3048| halt
+3049| halt
+3050| halt
+3051| halt
+3052| halt
+3053| halt
+3054| halt
+3055| halt
+3056| halt
+3057| halt
+3058| halt
+3059| halt
+3060| halt
+3061| halt
+3062| halt
+3063| halt
+3064| halt
+3065| halt
+3066| halt
+3067| halt
+3068| halt
+3069| halt
+3070| halt
+3071| halt
+3072| halt
+3073| halt
+3074| halt
+3075| halt
+3076| halt
+3077| halt
+3078| halt
+3079| halt
+3080| halt
+3081| halt
+3082| halt
+3083| halt
+3084| halt
+3085| halt
+3086| halt
+3087| halt
+3088| halt
+3089| halt
+3090| halt
+3091| halt
+3092| halt
+3093| halt
+3094| halt
+3095| halt
+3096| halt
+3097| halt
+3098| halt
+3099| halt
+3100| halt
+3101| halt
+3102| halt
+3103| halt
+3104| halt
+3105| halt
+3106| halt
+3107| halt
+3108| halt
+3109| halt
+3110| halt
+3111| halt
+3112| halt
+3113| halt
+3114| halt
+3115| halt
+3116| halt
+3117| halt
+3118| halt
+3119| halt
+3120| halt
+3121| halt
+3122| halt
+3123| halt
+3124| halt
+3125| halt
+3126| halt
+3127| halt
+3128| halt
+3129| halt
+3130| halt
+3131| halt
+3132| halt
+3133| halt
+3134| halt
+3135| halt
+3136| halt
+3137| halt
+3138| halt
+3139| halt
+3140| halt
+3141| halt
+3142| halt
+3143| halt
+3144| halt
+3145| halt
+3146| halt
+3147| halt
+3148| halt
+3149| halt
+3150| halt
+3151| halt
+3152| halt
+3153| halt
+3154| halt
+3155| halt
+3156| halt
+3157| halt
+3158| halt
+3159| halt
+3160| halt
+3161| halt
+3162| halt
+3163| halt
+3164| halt
+3165| halt
+3166| halt
+3167| halt
+3168| halt
+3169| halt
+3170| halt
+3171| halt
+3172| halt
+3173| halt
+3174| halt
+3175| halt
+3176| halt
+3177| halt
+3178| halt
+3179| halt
+3180| halt
+3181| halt
+3182| halt
+3183| halt
+3184| halt
+3185| halt
+3186| halt
+3187| halt
+3188| halt
+3189| halt
+3190| halt
+3191| halt
+3192| halt
+3193| halt
+3194| halt
+3195| halt
+3196| halt
+3197| halt
+3198| halt
+3199| halt
+3200| halt
+3201| halt
+3202| halt
+3203| halt
+3204| halt
+3205| halt
+3206| halt
+3207| halt
+3208| halt
+3209| halt
+3210| halt
+3211| halt
+3212| halt
+3213| halt
+3214| halt
+3215| halt
+3216| halt
+3217| halt
+3218| halt
+3219| halt
+3220| halt
+3221| halt
+3222| halt
+3223| halt
+3224| halt
+3225| halt
+3226| halt
+3227| halt
+3228| halt
+3229| halt
+3230| halt
+3231| halt
+3232| halt
+3233| halt
+3234| halt
+3235| halt
+3236| halt
+3237| halt
+3238| halt
+3239| halt
+3240| halt
+3241| halt
+3242| halt
+3243| halt
+3244| halt
+3245| halt
+3246| halt
+3247| halt
+3248| halt
+3249| halt
+3250| halt
+3251| halt
+3252| halt
+3253| halt
+3254| halt
+3255| halt
+3256| halt
+3257| halt
+3258| halt
+3259| halt
+3260| halt
+3261| halt
+3262| halt
+3263| halt
+3264| halt
+3265| halt
+3266| halt
+3267| halt
+3268| halt
+3269| halt
+3270| halt
+3271| halt
+3272| halt
+3273| halt
+3274| halt
+3275| halt
+3276| halt
+3277| halt
+3278| halt
+3279| halt
+3280| halt
+3281| halt
+3282| halt
+3283| halt
+3284| halt
+3285| halt
+3286| halt
+3287| halt
+3288| halt
+3289| halt
+3290| halt
+3291| halt
+3292| halt
+3293| halt
+3294| halt
+3295| halt
+3296| halt
+3297| halt
+3298| halt
+3299| halt
+3300| halt
+3301| halt
+3302| halt
+3303| halt
+3304| halt
+3305| halt
+3306| halt
+3307| halt
+3308| halt
+3309| halt
+3310| halt
+3311| halt
+3312| halt
+3313| halt
+3314| halt
+3315| halt
+3316| halt
+3317| halt
+3318| halt
+3319| halt
+3320| halt
+3321| halt
+3322| halt
+3323| halt
+3324| halt
+3325| halt
+3326| halt
+3327| halt
+3328| halt
+3329| halt
+3330| halt
+3331| halt
+3332| halt
+3333| halt
+3334| halt
+3335| halt
+3336| halt
+3337| halt
+3338| halt
+3339| halt
+3340| halt
+3341| halt
+3342| halt
+3343| halt
+3344| halt
+3345| halt
+3346| halt
+3347| halt
+3348| halt
+3349| halt
+3350| halt
+3351| halt
+3352| halt
+3353| halt
+3354| halt
+3355| halt
+3356| halt
+3357| halt
+3358| halt
+3359| halt
+3360| halt
+3361| halt
+3362| halt
+3363| halt
+3364| halt
+3365| halt
+3366| halt
+3367| halt
+3368| halt
+3369| halt
+3370| halt
+3371| halt
+3372| halt
+3373| halt
+3374| halt
+3375| halt
+3376| halt
+3377| halt
+3378| halt
+3379| halt
+3380| halt
+3381| halt
+3382| halt
+3383| halt
+3384| halt
+3385| halt
+3386| halt
+3387| halt
+3388| halt
+3389| halt
+3390| halt
+3391| halt
+3392| halt
+3393| halt
+3394| halt
+3395| halt
+3396| halt
+3397| halt
+3398| halt
+3399| halt
+3400| halt
+3401| halt
+3402| halt
+3403| halt
+3404| halt
+3405| halt
+3406| halt
+3407| halt
+3408| halt
+3409| halt
+3410| halt
+3411| halt
+3412| halt
+3413| halt
+3414| halt
+3415| halt
+3416| halt
+3417| halt
+3418| halt
+3419| halt
+3420| halt
+3421| halt
+3422| halt
+3423| halt
+3424| halt
+3425| halt
+3426| halt
+3427| halt
+3428| halt
+3429| halt
+3430| halt
+3431| halt
+3432| halt
+3433| halt
+3434| halt
+3435| halt
+3436| halt
+3437| halt
+3438| halt
+3439| halt
+3440| halt
+3441| halt
+3442| halt
+3443| halt
+3444| halt
+3445| halt
+3446| halt
+3447| halt
+3448| halt
+3449| halt
+3450| halt
+3451| halt
+3452| halt
+3453| halt
+3454| halt
+3455| halt
+3456| halt
+3457| halt
+3458| halt
+3459| halt
+3460| halt
+3461| halt
+3462| halt
+3463| halt
+3464| halt
+3465| halt
+3466| halt
+3467| halt
+3468| halt
+3469| halt
+3470| halt
+3471| halt
+3472| halt
+3473| halt
+3474| halt
+3475| halt
+3476| halt
+3477| halt
+3478| halt
+3479| halt
+3480| halt
+3481| halt
+3482| halt
+3483| halt
+3484| halt
+3485| halt
+3486| halt
+3487| halt
+3488| halt
+3489| halt
+3490| halt
+3491| halt
+3492| halt
+3493| halt
+3494| halt
+3495| halt
+3496| halt
+3497| halt
+3498| halt
+3499| halt
+3500| halt
+3501| halt
+3502| halt
+3503| halt
+3504| halt
+3505| halt
+3506| halt
+3507| halt
+3508| halt
+3509| halt
+3510| halt
+3511| halt
+3512| halt
+3513| halt
+3514| halt
+3515| halt
+3516| halt
+3517| halt
+3518| halt
+3519| halt
+3520| halt
+3521| halt
+3522| halt
+3523| halt
+3524| halt
+3525| halt
+3526| halt
+3527| halt
+3528| halt
+3529| halt
+3530| halt
+3531| halt
+3532| halt
+3533| halt
+3534| halt
+3535| halt
+3536| halt
+3537| halt
+3538| halt
+3539| halt
+3540| halt
+3541| halt
+3542| halt
+3543| halt
+3544| halt
+3545| halt
+3546| halt
+3547| halt
+3548| halt
+3549| halt
+3550| halt
+3551| halt
+3552| halt
+3553| halt
+3554| halt
+3555| halt
+3556| halt
+3557| halt
+3558| halt
+3559| halt
+3560| halt
+3561| halt
+3562| halt
+3563| halt
+3564| halt
+3565| halt
+3566| halt
+3567| halt
+3568| halt
+3569| halt
+3570| halt
+3571| halt
+3572| halt
+3573| halt
+3574| halt
+3575| halt
+3576| halt
+3577| halt
+3578| halt
+3579| halt
+3580| halt
+3581| halt
+3582| halt
+3583| halt
+3584| halt
+3585| halt
+3586| halt
+3587| halt
+3588| halt
+3589| halt
+3590| halt
+3591| halt
+3592| halt
+3593| halt
+3594| halt
+3595| halt
+3596| halt
+3597| halt
+3598| halt
+3599| halt
+3600| halt
+3601| halt
+3602| halt
+3603| halt
+3604| halt
+3605| halt
+3606| halt
+3607| halt
+3608| halt
+3609| halt
+3610| halt
+3611| halt
+3612| halt
+3613| halt
+3614| halt
+3615| halt
+3616| halt
+3617| halt
+3618| halt
+3619| halt
+3620| halt
+3621| halt
+3622| halt
+3623| halt
+3624| halt
+3625| halt
+3626| halt
+3627| halt
+3628| halt
+3629| halt
+3630| halt
+3631| halt
+3632| halt
+3633| halt
+3634| halt
+3635| halt
+3636| halt
+3637| halt
+3638| halt
+3639| halt
+3640| halt
+3641| halt
+3642| halt
+3643| halt
+3644| halt
+3645| halt
+3646| halt
+3647| halt
+3648| halt
+3649| halt
+3650| halt
+3651| halt
+3652| halt
+3653| halt
+3654| halt
+3655| halt
+3656| halt
+3657| halt
+3658| halt
+3659| halt
+3660| halt
+3661| halt
+3662| halt
+3663| halt
+3664| halt
+3665| halt
+3666| halt
+3667| halt
+3668| halt
+3669| halt
+3670| halt
+3671| halt
+3672| halt
+3673| halt
+3674| halt
+3675| halt
+3676| halt
+3677| halt
+3678| halt
+3679| halt
+3680| halt
+3681| halt
+3682| halt
+3683| halt
+3684| halt
+3685| halt
+3686| halt
+3687| halt
+3688| halt
+3689| halt
+3690| halt
+3691| halt
+3692| halt
+3693| halt
+3694| halt
+3695| halt
+3696| halt
+3697| halt
+3698| halt
+3699| halt
+3700| halt
+3701| halt
+3702| halt
+3703| halt
+3704| halt
+3705| halt
+3706| halt
+3707| halt
+3708| halt
+3709| halt
+3710| halt
+3711| halt
+3712| halt
+3713| halt
+3714| halt
+3715| halt
+3716| halt
+3717| halt
+3718| halt
+3719| halt
+3720| halt
+3721| halt
+3722| halt
+3723| halt
+3724| halt
+3725| halt
+3726| halt
+3727| halt
+3728| halt
+3729| halt
+3730| halt
+3731| halt
+3732| halt
+3733| halt
+3734| halt
+3735| halt
+3736| halt
+3737| halt
+3738| halt
+3739| halt
+3740| halt
+3741| halt
+3742| halt
+3743| halt
+3744| halt
+3745| halt
+3746| halt
+3747| halt
+3748| halt
+3749| halt
+3750| halt
+3751| halt
+3752| halt
+3753| halt
+3754| halt
+3755| halt
+3756| halt
+3757| halt
+3758| halt
+3759| halt
+3760| halt
+3761| halt
+3762| halt
+3763| halt
+3764| halt
+3765| halt
+3766| halt
+3767| halt
+3768| halt
+3769| halt
+3770| halt
+3771| halt
+3772| halt
+3773| halt
+3774| halt
+3775| halt
+3776| halt
+3777| halt
+3778| halt
+3779| halt
+3780| halt
+3781| halt
+3782| halt
+3783| halt
+3784| halt
+3785| halt
+3786| halt
+3787| halt
+3788| halt
+3789| halt
+3790| halt
+3791| halt
+3792| halt
+3793| halt
+3794| halt
+3795| halt
+3796| halt
+3797| halt
+3798| halt
+3799| halt
+3800| halt
+3801| halt
+3802| halt
+3803| halt
+3804| halt
+3805| halt
+3806| halt
+3807| halt
+3808| halt
+3809| halt
+3810| halt
+3811| halt
+3812| halt
+3813| halt
+3814| halt
+3815| halt
+3816| halt
+3817| halt
+3818| halt
+3819| halt
+3820| halt
+3821| halt
+3822| halt
+3823| halt
+3824| halt
+3825| halt
+3826| halt
+3827| halt
+3828| halt
+3829| halt
+3830| halt
+3831| halt
+3832| halt
+3833| halt
+3834| halt
+3835| halt
+3836| halt
+3837| halt
+3838| halt
+3839| halt
+3840| halt
+3841| halt
+3842| halt
+3843| halt
+3844| halt
+3845| halt
+3846| halt
+3847| halt
+3848| halt
+3849| halt
+3850| halt
+3851| halt
+3852| halt
+3853| halt
+3854| halt
+3855| halt
+3856| halt
+3857| halt
+3858| halt
+3859| halt
+3860| halt
+3861| halt
+3862| halt
+3863| halt
+3864| halt
+3865| halt
+3866| halt
+3867| halt
+3868| halt
+3869| halt
+3870| halt
+3871| halt
+3872| halt
+3873| halt
+3874| halt
+3875| halt
+3876| halt
+3877| halt
+3878| halt
+3879| halt
+3880| halt
+3881| halt
+3882| halt
+3883| halt
+3884| halt
+3885| halt
+3886| halt
+3887| halt
+3888| halt
+3889| halt
+3890| halt
+3891| halt
+3892| halt
+3893| halt
+3894| halt
+3895| halt
+3896| halt
+3897| halt
+3898| halt
+3899| halt
+3900| halt
+3901| halt
+3902| halt
+3903| halt
+3904| halt
+3905| halt
+3906| halt
+3907| halt
+3908| halt
+3909| halt
+3910| halt
+3911| halt
+3912| halt
+3913| halt
+3914| halt
+3915| halt
+3916| halt
+3917| halt
+3918| halt
+3919| halt
+3920| halt
+3921| halt
+3922| halt
+3923| halt
+3924| halt
+3925| halt
+3926| halt
+3927| halt
+3928| halt
+3929| halt
+3930| halt
+3931| halt
+3932| halt
+3933| halt
+3934| halt
+3935| halt
+3936| halt
+3937| halt
+3938| halt
+3939| halt
+3940| halt
+3941| halt
+3942| halt
+3943| halt
+3944| halt
+3945| halt
+3946| halt
+3947| halt
+3948| halt
+3949| halt
+3950| halt
+3951| halt
+3952| halt
+3953| halt
+3954| halt
+3955| halt
+3956| halt
+3957| halt
+3958| halt
+3959| halt
+3960| halt
+3961| halt
+3962| halt
+3963| halt
+3964| halt
+3965| halt
+3966| halt
+3967| halt
+3968| halt
+3969| halt
+3970| halt
+3971| halt
+3972| halt
+3973| halt
+3974| halt
+3975| halt
+3976| halt
+3977| halt
+3978| halt
+3979| halt
+3980| halt
+3981| halt
+3982| halt
+3983| halt
+3984| halt
+3985| halt
+3986| halt
+3987| halt
+3988| halt
+3989| halt
+3990| halt
+3991| halt
+3992| halt
+3993| halt
+3994| halt
+3995| halt
+3996| halt
+3997| halt
+3998| halt
+3999| halt
+4000| halt
+4001| halt
+4002| halt
+4003| halt
+4004| halt
+4005| halt
+4006| halt
+4007| halt
+4008| halt
+4009| halt
+4010| halt
+4011| halt
+4012| halt
+4013| halt
+4014| halt
+4015| halt
+4016| halt
+4017| halt
+4018| halt
+4019| halt
+4020| halt
+4021| halt
+4022| halt
+4023| halt
+4024| halt
+4025| halt
+4026| halt
+4027| halt
+4028| halt
+4029| halt
+4030| halt
+4031| halt
+4032| halt
+4033| halt
+4034| halt
+4035| halt
+4036| halt
+4037| halt
+4038| halt
+4039| halt
+4040| halt
+4041| halt
+4042| halt
+4043| halt
+4044| halt
+4045| halt
+4046| halt
+4047| halt
+4048| halt
+4049| halt
+4050| halt
+4051| halt
+4052| halt
+4053| halt
+4054| halt
+4055| halt
+4056| halt
+4057| halt
+4058| halt
+4059| halt
+4060| halt
+4061| halt
+4062| halt
+4063| halt
+4064| halt
+4065| halt
+4066| halt
+4067| halt
+4068| halt
+4069| halt
+4070| halt
+4071| halt
+4072| halt
+4073| halt
+4074| halt
+4075| halt
+4076| halt
+4077| halt
+4078| halt
+4079| halt
+4080| halt
+4081| halt
+4082| halt
+4083| halt
+4084| halt
+4085| halt
+4086| halt
+4087| halt
+4088| halt
+4089| halt
+4090| halt
+4091| halt
+4092| halt
+4093| halt
+4094| halt
+4095| halt
+4096| halt
+4097| halt
+4098| halt
+4099| halt
+4100| halt
+4101| halt
+4102| halt
+4103| halt
+4104| halt
+4105| halt
+4106| halt
+4107| halt
+4108| halt
+4109| halt
+4110| halt
+4111| halt
+4112| halt
+4113| halt
+4114| halt
+4115| halt
+4116| halt
+4117| halt
+4118| halt
+4119| halt
+4120| halt
+4121| halt
+4122| halt
+4123| halt
+4124| halt
+4125| halt
+4126| halt
+4127| halt
+4128| halt
+4129| halt
+4130| halt
+4131| halt
+4132| halt
+4133| halt
+4134| halt
+4135| halt
+4136| halt
+4137| halt
+4138| halt
+4139| halt
+4140| halt
+4141| halt
+4142| halt
+4143| halt
+4144| halt
+4145| halt
+4146| halt
+4147| halt
+4148| halt
+4149| halt
+4150| halt
+4151| halt
+4152| halt
+4153| halt
+4154| halt
+4155| halt
+4156| halt
+4157| halt
+4158| halt
+4159| halt
+4160| halt
+4161| halt
+4162| halt
+4163| halt
+4164| halt
+4165| halt
+4166| halt
+4167| halt
+4168| halt
+4169| halt
+4170| halt
+4171| halt
+4172| halt
+4173| halt
+4174| halt
+4175| halt
+4176| halt
+4177| halt
+4178| halt
+4179| halt
+4180| halt
+4181| halt
+4182| halt
+4183| halt
+4184| halt
+4185| halt
+4186| halt
+4187| halt
+4188| halt
+4189| halt
+4190| halt
+4191| halt
+4192| halt
+4193| halt
+4194| halt
+4195| halt
+4196| halt
+4197| halt
+4198| halt
+4199| halt
+4200| halt
+4201| halt
+4202| halt
+4203| halt
+4204| halt
+4205| halt
+4206| halt
+4207| halt
+4208| halt
+4209| halt
+4210| halt
+4211| halt
+4212| halt
+4213| halt
+4214| halt
+4215| halt
+4216| halt
+4217| halt
+4218| halt
+4219| halt
+4220| halt
+4221| halt
+4222| halt
+4223| halt
+4224| halt
+4225| halt
+4226| halt
+4227| halt
+4228| halt
+4229| halt
+4230| halt
+4231| halt
+4232| halt
+4233| halt
+4234| halt
+4235| halt
+4236| halt
+4237| halt
+4238| halt
+4239| halt
+4240| halt
+4241| halt
+4242| halt
+4243| halt
+4244| halt
+4245| halt
+4246| halt
+4247| halt
+4248| halt
+4249| halt
+4250| halt
+4251| halt
+4252| halt
+4253| halt
+4254| halt
+4255| halt
+4256| halt
+4257| halt
+4258| halt
+4259| halt
+4260| halt
+4261| halt
+4262| halt
+4263| halt
+4264| halt
+4265| halt
+4266| halt
+4267| halt
+4268| halt
+4269| halt
+4270| halt
+4271| halt
+4272| halt
+4273| halt
+4274| halt
+4275| halt
+4276| halt
+4277| halt
+4278| halt
+4279| halt
+4280| halt
+4281| halt
+4282| halt
+4283| halt
+4284| halt
+4285| halt
+4286| halt
+4287| halt
+4288| halt
+4289| halt
+4290| halt
+4291| halt
+4292| halt
+4293| halt
+4294| halt
+4295| halt
+4296| halt
+4297| halt
+4298| halt
+4299| halt
+4300| halt
+4301| halt
+4302| halt
+4303| halt
+4304| halt
+4305| halt
+4306| halt
+4307| halt
+4308| halt
+4309| halt
+4310| halt
+4311| halt
+4312| halt
+4313| halt
+4314| halt
+4315| halt
+4316| halt
+4317| halt
+4318| halt
+4319| halt
+4320| halt
+4321| halt
+4322| halt
+4323| halt
+4324| halt
+4325| halt
+4326| halt
+4327| halt
+4328| halt
+4329| halt
+4330| halt
+4331| halt
+4332| halt
+4333| halt
+4334| halt
+4335| halt
+4336| halt
+4337| halt
+4338| halt
+4339| halt
+4340| halt
+4341| halt
+4342| halt
+4343| halt
+4344| halt
+4345| halt
+4346| halt
+4347| halt
+4348| halt
+4349| halt
+4350| halt
+4351| halt
+4352| halt
+4353| halt
+4354| halt
+4355| halt
+4356| halt
+4357| halt
+4358| halt
+4359| halt
+4360| halt
+4361| halt
+4362| halt
+4363| halt
+4364| halt
+4365| halt
+4366| halt
+4367| halt
+4368| halt
+4369| halt
+4370| halt
+4371| halt
+4372| halt
+4373| halt
+4374| halt
+4375| halt
+4376| halt
+4377| halt
+4378| halt
+4379| halt
+4380| halt
+4381| halt
+4382| halt
+4383| halt
+4384| halt
+4385| halt
+4386| halt
+4387| halt
+4388| halt
+4389| halt
+4390| halt
+4391| halt
+4392| halt
+4393| halt
+4394| halt
+4395| halt
+4396| halt
+4397| halt
+4398| halt
+4399| halt
+4400| halt
+4401| halt
+4402| halt
+4403| halt
+4404| halt
+4405| halt
+4406| halt
+4407| halt
+4408| halt
+4409| halt
+4410| halt
+4411| halt
+4412| halt
+4413| halt
+4414| halt
+4415| halt
+4416| halt
+4417| halt
+4418| halt
+4419| halt
+4420| halt
+4421| halt
+4422| halt
+4423| halt
+4424| halt
+4425| halt
+4426| halt
+4427| halt
+4428| halt
+4429| halt
+4430| halt
+4431| halt
+4432| halt
+4433| halt
+4434| halt
+4435| halt
+4436| halt
+4437| halt
+4438| halt
+4439| halt
+4440| halt
+4441| halt
+4442| halt
+4443| halt
+4444| halt
+4445| halt
+4446| halt
+4447| halt
+4448| halt
+4449| halt
+4450| halt
+4451| halt
+4452| halt
+4453| halt
+4454| halt
+4455| halt
+4456| halt
+4457| halt
+4458| halt
+4459| halt
+4460| halt
+4461| halt
+4462| halt
+4463| halt
+4464| halt
+4465| halt
+4466| halt
+4467| halt
+4468| halt
+4469| halt
+4470| halt
+4471| halt
+4472| halt
+4473| halt
+4474| halt
+4475| halt
+4476| halt
+4477| halt
+4478| halt
+4479| halt
+4480| halt
+4481| halt
+4482| halt
+4483| halt
+4484| halt
+44

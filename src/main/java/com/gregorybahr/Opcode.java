@@ -1,8 +1,17 @@
 package com.gregorybahr;
 
 /**
- * Created by greg on 2/4/2017.
+ * Created by greg on 2/5/2017.
  */
-public interface Opcode {
-    void execute();
+public abstract class Opcode {
+
+    public String name;
+    public int numParams;
+
+    public Opcode(String name, int numParams) {
+        this.name = name;
+        this.numParams = numParams;
+    }
+
+    public abstract void execute();
 }

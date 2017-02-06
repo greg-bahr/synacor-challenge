@@ -23,7 +23,8 @@ public class VirtualMachine {
         opcodes = new HashMap<Integer, Opcode>();
 
         // halt
-        opcodes.put(0, new Opcode() {
+        opcodes.put(0, new Opcode("halt", 0) {
+            @Override
             public void execute() {
                 System.out.println("Halting.");
                 System.exit(0);
@@ -31,7 +32,8 @@ public class VirtualMachine {
         });
 
         // set a b
-        opcodes.put(1, new Opcode() {
+        opcodes.put(1, new Opcode("set", 2) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -41,7 +43,8 @@ public class VirtualMachine {
         });
 
         // push a
-        opcodes.put(2, new Opcode() {
+        opcodes.put(2, new Opcode("push", 1) {
+            @Override
             public void execute() {
                 stack.push(interpretMem(memory[pc+1]));
                 pc += 2;
@@ -49,7 +52,8 @@ public class VirtualMachine {
         });
 
         // pop a
-        opcodes.put(3, new Opcode() {
+        opcodes.put(3, new Opcode("pop", 1) {
+            @Override
             public void execute() {
                 if(stack.empty()) {
                     throw new IllegalStateException("Attempted to pop empty stack.");
@@ -61,7 +65,8 @@ public class VirtualMachine {
         });
 
         // eq a b c
-        opcodes.put(4, new Opcode() {
+        opcodes.put(4, new Opcode("eq", 3) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -72,7 +77,8 @@ public class VirtualMachine {
         });
 
         // gt a b c
-        opcodes.put(5, new Opcode() {
+        opcodes.put(5, new Opcode("gt", 3) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -83,7 +89,8 @@ public class VirtualMachine {
         });
 
         // jmp a
-        opcodes.put(6, new Opcode() {
+        opcodes.put(6, new Opcode("jmp", 1) {
+            @Override
             public void execute() {
                 //System.out.println("Jumping to " + interpretMem(memory[pc+1]) + " which contains " + memory[interpretMem(memory[pc+1])]);
                 pc = memory[pc+1];
@@ -91,7 +98,8 @@ public class VirtualMachine {
         });
 
         // jt a b
-        opcodes.put(7, new Opcode() {
+        opcodes.put(7, new Opcode("jt", 2) {
+            @Override
             public void execute() {
                 int a = interpretMem(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -106,7 +114,8 @@ public class VirtualMachine {
         });
 
         // jf a b
-        opcodes.put(8, new Opcode() {
+        opcodes.put(8, new Opcode("jf", 2) {
+            @Override
             public void execute() {
                 int a = interpretMem(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -121,7 +130,8 @@ public class VirtualMachine {
         });
 
         // add a b c
-        opcodes.put(9, new Opcode() {
+        opcodes.put(9, new Opcode("add", 3) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -134,7 +144,8 @@ public class VirtualMachine {
         });
 
         // mult a b c
-        opcodes.put(10, new Opcode() {
+        opcodes.put(10, new Opcode("mult", 3) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -147,7 +158,8 @@ public class VirtualMachine {
         });
 
         // mod a b c
-        opcodes.put(11, new Opcode() {
+        opcodes.put(11, new Opcode("mod", 3) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -160,7 +172,8 @@ public class VirtualMachine {
         });
 
         // and a b c
-        opcodes.put(12, new Opcode() {
+        opcodes.put(12, new Opcode("and", 3) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -171,7 +184,8 @@ public class VirtualMachine {
         });
 
         // or a b c
-        opcodes.put(13, new Opcode() {
+        opcodes.put(13, new Opcode("or", 3) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -182,7 +196,8 @@ public class VirtualMachine {
         });
 
         // not a b
-        opcodes.put(14, new Opcode() {
+        opcodes.put(14, new Opcode("not", 2) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -192,7 +207,8 @@ public class VirtualMachine {
         });
 
         // rmem a b
-        opcodes.put(15, new Opcode() {
+        opcodes.put(15, new Opcode("rmem", 2) {
+            @Override
             public void execute() {
                 int a = getRegisterIndex(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -203,7 +219,8 @@ public class VirtualMachine {
         });
 
         // wmem a b
-        opcodes.put(16, new Opcode() {
+        opcodes.put(16, new Opcode("wmem", 2) {
+            @Override
             public void execute() {
                 int a = interpretMem(memory[pc+1]);
                 int b = interpretMem(memory[pc+2]);
@@ -215,7 +232,8 @@ public class VirtualMachine {
         });
 
         // call a
-        opcodes.put(17, new Opcode() {
+        opcodes.put(17, new Opcode("call", 1) {
+            @Override
             public void execute() {
                 int a = interpretMem(memory[pc+1]);
                 int b = pc+2;
@@ -226,7 +244,8 @@ public class VirtualMachine {
         });
 
         // ret
-        opcodes.put(18, new Opcode() {
+        opcodes.put(18, new Opcode("ret", 0) {
+            @Override
             public void execute() {
                 if (stack.empty()) {
                     opcodes.get(0).execute(); // halt
@@ -237,7 +256,8 @@ public class VirtualMachine {
         });
 
         // out a
-        opcodes.put(19, new Opcode() {
+        opcodes.put(19, new Opcode("out", 1) {
+            @Override
             public void execute() {
                 System.out.print((char)interpretMem(memory[pc+1]));
                 pc += 2;
@@ -245,7 +265,8 @@ public class VirtualMachine {
         });
 
         // in a
-        opcodes.put(20, new Opcode() {
+        opcodes.put(20, new Opcode("in", 1) {
+            @Override
             public void execute() {
                 try {
                     char c = (char) System.in.read();
@@ -259,7 +280,8 @@ public class VirtualMachine {
         });
 
         // noop
-        opcodes.put(21, new Opcode() {
+        opcodes.put(21, new Opcode("noop", 0) {
+            @Override
             public void execute() {
                 pc += 1;
             }
@@ -292,6 +314,14 @@ public class VirtualMachine {
             throw new IllegalArgumentException("Not a valid register.");
         }
         return num%32768;
+    }
+
+    public int[] getMemory() {
+        return memory;
+    }
+
+    public HashMap<Integer, Opcode> getOpcodes() {
+        return opcodes;
     }
 }
 
