@@ -1,16 +1,13 @@
 package com.gregorybahr;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by greg on 2/4/2017.
  */
 public class Main {
     public static void main(String[] args) {
-        VirtualMachine vm = new VirtualMachine(loadBytesFromFile(), false);
+        VirtualMachine vm = loadSave();
         while (true) {
             vm.cycle();
         }
@@ -35,5 +32,18 @@ public class Main {
             e.printStackTrace();
         }
         return programBytes;
+    }
+
+    private static VirtualMachine loadSave() {
+        VirtualMachine vm = new VirtualMachine(loadBytesFromFile());
+        try {
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream("saveState.bin"));
+            vm = (VirtualMachine)is.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return vm;
     }
 }

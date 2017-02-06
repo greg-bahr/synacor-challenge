@@ -1,24 +1,25 @@
 package com.gregorybahr;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Stack;
 
 /**
  * Created by greg on 2/4/2017.
  */
-public class VirtualMachine {
+public class VirtualMachine implements Serializable {
     private int pc;
     private int[] memory;
     private Stack<Integer> stack;
     private int[] registers;
-    private Disassembler ds;
-    private boolean disassemble;
 
     private HashMap<Integer, Opcode> opcodes;
 
-    public VirtualMachine(int[] data, boolean disassemble) {
-        pc = 0;
+    public VirtualMachine(int[] data) {
+        this.pc = 0;
         memory = data;
         stack = new Stack<Integer>();
         registers = new int[8];
@@ -237,7 +238,6 @@ public class VirtualMachine {
         opcodes.put(17, new Opcode("call", 1) {
             @Override
             public void execute() {
-                System.out.println(ds.decodeOpcode(pc, memory));
                 int a = interpretMem(memory[pc+1]);
                 int b = pc+2;
 
@@ -273,6 +273,10 @@ public class VirtualMachine {
             public void execute() {
                 try {
                     char c = (char) System.in.read();
+                    if(c == ".".charAt(0)) {
+                        saveState(pc);
+                        System.exit(0);
+                    }
                     int a = getRegisterIndex(memory[pc+1]);
                     registers[a] = (int)c;
                     pc += 2;
@@ -289,19 +293,12 @@ public class VirtualMachine {
                 pc += 1;
             }
         });
-
-        ds = new Disassembler(this);
-        this.disassemble = disassemble;
     }
 
     public void cycle() {
         Opcode opcode = opcodes.get(interpretMem(memory[pc]));
         if(opcode != null) {
-            if(disassemble) {
-                System.out.println(ds.decodeOpcode(pc, memory));
-            }
             opcode.execute();
-
         } else {
             System.out.println("Opcode: " + interpretMem(memory[pc]) + " is not implemented.");
             System.exit(1);
@@ -324,6 +321,17 @@ public class VirtualMachine {
             throw new IllegalArgumentException("Not a valid register.");
         }
         return num%32768;
+    }
+
+    public void saveState(int pc) {
+        try {
+            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("saveState.bin"));
+            os.writeObject(this);
+            os.flush();
+            os.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public int[] getMemory() {

@@ -24,27 +24,16 @@ public class Disassembler {
     public String decodeOpcode() {
         if (byteCode[offset] > 21) {
             offset++;
-            return "";
+            ln++;
+            return ln-1 + "| unknown " + byteCode[offset-1];
         }
         Opcode opcode = opcodes.get(byteCode[offset]);
         String name = opcode.name;
         int numParams = opcode.numParams;
 
         StringBuilder output = new StringBuilder(ln + "| " + name);
-
-        if (name.equals("out")) {
-            char c;
-            output.append(" "+(char)byteCode[offset+1]);
-            while (byteCode[offset+2] == 19 && byteCode[offset+1] != 10) {
-                offset+=2;
-                c = (char)byteCode[offset+1];
-                output.append(c);
-            }
-            output.deleteCharAt(output.length()-1);
-        } else {
-            for (int i = 0; i < numParams; i++) {
-                output.append(getNumString(byteCode[offset + (i + 1)]));
-            }
+        for (int i = 0; i < numParams; i++) {
+            output.append(getNumString(byteCode[offset + (i + 1)]));
         }
         offset += 1 + numParams;
         ln++;
@@ -59,21 +48,10 @@ public class Disassembler {
         String name = opcode.name;
         int numParams = opcode.numParams;
 
-        StringBuilder output = new StringBuilder(ln + "| " + name);
+        StringBuilder output = new StringBuilder(name);
 
-        if (name.equals("out")) {
-            char c;
-            output.append(" "+(char)byteCode[offset+1]);
-            while (byteCode[offset+2] == 19 && byteCode[offset+1] != 10) {
-                offset+=2;
-                c = (char)byteCode[offset+1];
-                output.append(c);
-            }
-            output.deleteCharAt(output.length()-1);
-        } else {
-            for (int i = 0; i < numParams; i++) {
-                output.append(getNumString(byteCode[offset + (i + 1)]));
-            }
+        for (int i = 0; i < numParams; i++) {
+            output.append(getNumString(byteCode[offset + (i + 1)]));
         }
         return output.toString();
     }
