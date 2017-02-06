@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) {
-        VirtualMachine vm = new VirtualMachine(loadBytesFromFile());
+        VirtualMachine vm = new VirtualMachine(loadBytesFromFile(), false);
         while (true) {
             vm.cycle();
         }

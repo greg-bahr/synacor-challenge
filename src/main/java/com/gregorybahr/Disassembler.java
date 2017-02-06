@@ -51,7 +51,7 @@ public class Disassembler {
         return output.toString();
     }
 
-    public String decodeOpcode(int offset) {
+    public String decodeOpcode(int offset, int[] memory) {
         if (byteCode[offset] > 21) {
             return "";
         }

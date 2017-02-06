@@ -12,10 +12,12 @@ public class VirtualMachine {
     private int[] memory;
     private Stack<Integer> stack;
     private int[] registers;
+    private Disassembler ds;
+    private boolean disassemble;
 
     private HashMap<Integer, Opcode> opcodes;
 
-    public VirtualMachine(int[] data) {
+    public VirtualMachine(int[] data, boolean disassemble) {
         pc = 0;
         memory = data;
         stack = new Stack<Integer>();
@@ -235,6 +237,7 @@ public class VirtualMachine {
         opcodes.put(17, new Opcode("call", 1) {
             @Override
             public void execute() {
+                System.out.println(ds.decodeOpcode(pc, memory));
                 int a = interpretMem(memory[pc+1]);
                 int b = pc+2;
 
@@ -286,12 +289,19 @@ public class VirtualMachine {
                 pc += 1;
             }
         });
+
+        ds = new Disassembler(this);
+        this.disassemble = disassemble;
     }
 
     public void cycle() {
         Opcode opcode = opcodes.get(interpretMem(memory[pc]));
         if(opcode != null) {
+            if(disassemble) {
+                System.out.println(ds.decodeOpcode(pc, memory));
+            }
             opcode.execute();
+
         } else {
             System.out.println("Opcode: " + interpretMem(memory[pc]) + " is not implemented.");
             System.exit(1);
