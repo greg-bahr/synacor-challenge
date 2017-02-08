@@ -15,6 +15,7 @@ public class VirtualMachine implements Serializable {
     private int[] memory;
     private Stack<Integer> stack;
     private int[] registers;
+    private Disassembler ds;
 
     private HashMap<Integer, Opcode> opcodes;
 
@@ -238,6 +239,7 @@ public class VirtualMachine implements Serializable {
         opcodes.put(17, new Opcode("call", 1) {
             @Override
             public void execute() {
+                System.out.println(ds.decodeOpcode(pc, memory));
                 int a = interpretMem(memory[pc+1]);
                 int b = pc+2;
 
@@ -293,6 +295,7 @@ public class VirtualMachine implements Serializable {
                 pc += 1;
             }
         });
+        ds = new Disassembler(this);
     }
 
     public void cycle() {

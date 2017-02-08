@@ -1,5 +1,7 @@
 package com.gregorybahr;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 
 /**
@@ -11,32 +13,28 @@ public class Disassembler {
     private int[] byteCode;
     private HashMap<Integer, Opcode> opcodes;
     private int offset;
-    private int ln;
 
     public Disassembler(VirtualMachine vm) {
         this.vm = vm;
         byteCode = vm.getMemory();
         opcodes = vm.getOpcodes();
         offset = 0;
-        ln = 0;
     }
 
-    public String decodeOpcode() {
+    public String decodeBin() {
         if (byteCode[offset] > 21) {
             offset++;
-            ln++;
-            return ln-1 + "| unknown " + byteCode[offset-1];
+            return offset-1 + "| unknown " + byteCode[offset-1];
         }
         Opcode opcode = opcodes.get(byteCode[offset]);
         String name = opcode.name;
         int numParams = opcode.numParams;
 
-        StringBuilder output = new StringBuilder(ln + "| " + name);
+        StringBuilder output = new StringBuilder(offset + "| " + name);
         for (int i = 0; i < numParams; i++) {
             output.append(getNumString(byteCode[offset + (i + 1)]));
         }
         offset += 1 + numParams;
-        ln++;
         return output.toString();
     }
 
@@ -67,4 +65,21 @@ public class Disassembler {
             return " "+Integer.toString(num);
         }
     }
+
+
+    public static void main(String[] args) {
+        VirtualMachine vm = new VirtualMachine(Main.loadBytesFromFile());
+        Disassembler ds = new Disassembler(vm);
+        try {
+            PrintWriter pw = new PrintWriter("disassem.txt");
+            while (ds.offset < 32768) {
+                pw.println(ds.decodeBin());
+            }
+            pw.flush();
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -13,7 +13,7 @@ public class Main {
         }
     }
 
-    private static int[] loadBytesFromFile() {
+    public static int[] loadBytesFromFile() {
         int[] programBytes = new int[32768];
         byte[] buffer = new byte[2];
         BufferedInputStream inputStream = null;
