@@ -11,6 +11,8 @@ import java.util.Stack;
  * Created by greg on 2/4/2017.
  */
 public class VirtualMachine implements Serializable {
+    //TODO: Write a debugger to use when the program is running, since much of the data is XOR encrypted in the file.
+
     private int pc;
     private int[] memory;
     private Stack<Integer> stack;
@@ -239,7 +241,7 @@ public class VirtualMachine implements Serializable {
         opcodes.put(17, new Opcode("call", 1) {
             @Override
             public void execute() {
-                System.out.println(ds.decodeOpcode(pc, memory));
+                //System.out.println(ds.decodeOpcode(pc, memory));
                 int a = interpretMem(memory[pc+1]);
                 int b = pc+2;
 
@@ -274,6 +276,7 @@ public class VirtualMachine implements Serializable {
             @Override
             public void execute() {
                 try {
+                    //System.out.println("Maze Room ID: " + memory[3726]);
                     char c = (char) System.in.read();
                     if(c == ".".charAt(0)) {
                         saveState(pc);
@@ -327,6 +330,7 @@ public class VirtualMachine implements Serializable {
     }
 
     public void saveState(int pc) {
+        // easy and inefficient save states
         try {
             ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("saveState.bin"));
             os.writeObject(this);

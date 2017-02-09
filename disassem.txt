@@ -662,24 +662,24 @@
 1453| out 112
 1455| out 10
 1457| halt
-1458| push (r0)
-1460| push (r3)
+1458| push (r0) // Throws registers onto the stack to use them as local vars
+1460| push (r3) // this probably has some thing to do with displaying text from the input buffer
 1462| push (r4)
 1464| push (r5)
 1466| push (r6)
 1468| set (r6) (r0)
 1471| set (r5) (r1)
 1474| rmem (r4) (r0)
-1477| set (r1) 0
-1480| add (r3) 1 (r1)
+1477| set (r1) 0 // beginning of for loop
+1480| add (r3) 1 (r1)      for((r1)=0; (r3) < (r4); (r3)+=(r6)) {
 1484| gt (r0) (r3) (r4)
 1488| jt (r0) 1507
-1491| add (r3) (r3) (r6)
+1491| add (r3) (r3) (r6)   }
 1495| rmem (r0) (r3)
 1498| call (r5)
 1500| add (r1) (r1) 1
-1504| jt (r1) 1480
-1507| pop (r6)
+1504| jt (r1) 1480 // end of for loop
+1507| pop (r6) // returns the registers to their original values
 1509| pop (r5)
 1511| pop (r4)
 1513| pop (r3)

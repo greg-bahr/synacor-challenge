@@ -1,4 +1,22 @@
 when entering one of the maze rooms:
 call 1571
-call 1543
-call 1458
+call 1543  -- called after every command
+call 1458  -- probably just to display text
+
+call 3727  -- mem[3726] |= (r0) possibly a room id?
+           -- might lead to where rooms are stored in memory?
+
+
+when checking inventory:
+call 1667
+call 5876
+
+when taking the tablet:
+call 5921
+
+the grue:
+call 2964 -- also happens when entering maze rooms
+
+
+call 2125 -- an xor operation = (r0) XOR (r1)
+          -- lots of text encrypted with this

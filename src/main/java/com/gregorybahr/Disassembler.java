@@ -2,12 +2,13 @@ package com.gregorybahr;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.HashMap;
 
 /**
  * Created by greg on 2/5/2017.
  */
-public class Disassembler {
+public class Disassembler implements Serializable {
 
     private VirtualMachine vm;
     private int[] byteCode;
